@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background: linear-gradient(to bottom, #4b839e, #fff) center center
+		no-repeat;
+	color: #fff;
+}
+
+body {
+	height: 100vh;
+}
+
+pre span a {
+	color: #ffd665;
+	font-weight: bold;
+	text-decoration: underline;
+	transition: all 0.4s;
+}
+
+pre span a:hover {
+	color: #ff6565;
+}
+
+.bg-code {
+	background-color: #3c3c3c;
+}
+
+.text-comp {
+	color: #ffd665;
+}
+
+.text-prop {
+	color: #7aacff;
+}
+
+.text-prop-str {
+	color: #a7e783;
+}
+
+.text-prop-nmbr {
+	color: #ff7646;
+}
+
+.parent-container > pre {
+	margin-left: 2ch;
+}

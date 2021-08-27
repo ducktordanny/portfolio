@@ -1,0 +1,5 @@
+-   [ ] Add more design elements to Figma.
+-   [ ] The Logo should redirect to Home page.
+-   [ ] Add animations with gsap.
+-   [ ] Make it responsive for mobile.
+-   [ ] Implement JSON handling and move main data there.
