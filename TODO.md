@@ -1,5 +1,9 @@
--   [ ] Add more design elements to Figma.
--   [ ] The Logo should redirect to Home page.
--   [ ] Add animations with gsap.
--   [ ] Make it responsive for mobile.
--   [ ] Implement JSON handling and move main data there.
+-   [x] Update 404.tsx
+-   [x] Add animations with gsap.
+-   [x] Add new favicon.ico
+-   [x] The Logo should redirect to Home page.
+-   [x] Update Layout component to contain the Navigation part
+-   [x] Make it responsive for mobile.
+-   [x] Add more design elements to Figma.
+-   [ ] Implement JSON handling and move main data there?
+-   [ ] Fixes and improvements.

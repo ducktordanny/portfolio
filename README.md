@@ -12,4 +12,4 @@ The goal is that I want to be able to make some JSON files with the data what sh
 
 ## Made with
 
-Made with the fantastic Next.js and also used TypeScript and tailwindcss.
+Made with the fantastic Next.js and also used TypeScript, tailwindcss and gsap.

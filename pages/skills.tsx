@@ -7,60 +7,43 @@ import {
 } from '../components/code';
 import Layout from '../components/layout';
 
+// TODO: in layout.tsx we should use next/router to detect which page we are on...
+// TODO: maybe we should make a navigation component and after that just use it with an array of pages
+// TODO: should redirect from home to / or inversely
+
 const Skills: NextPage = () => {
 	return (
 		<Layout>
-			<Head>
-				<title>Skills</title>
-			</Head>
-			<ParentComponent name="DucktorDanny">
-				<ParentComponent
-					name="Navigation"
-					props={[{ name: 'currentlyOn', value: 'Skills' }]}
-				>
-					<LinkComponent name="Home" navigation href="/" />
-					<LinkComponent
-						name="Projects"
-						navigation
-						href="/projects"
-					/>
-					<LinkComponent
-						name="Contacts"
-						navigation
-						href="/contacts"
-					/>
-				</ParentComponent>
-				<SelfClosingComponent
-					name="Skills"
-					props={[
-						{
-							name: 'code',
-							value: [
-								'HTML',
-								'CSS',
-								'JavaScript',
-								'TypeScript',
-								'NodeJS',
-								'Express',
-								'MongoDB',
-								'SQL',
-								'React',
-								'React Native',
-								'tailwindcss',
-								'etc.',
-							],
-						},
-						{
-							name: 'other',
-							value: ['Trello', 'Figma', 'Git', 'Vercel'],
-						},
-						{
-							name: 'language',
-							value: ['English (B2)'],
-						},
-					]}
-				/>
-			</ParentComponent>
+			<SelfClosingComponent
+				name="Skills"
+				props={[
+					{
+						name: 'code',
+						value: [
+							'HTML',
+							'CSS',
+							'JavaScript',
+							'TypeScript',
+							'NodeJS',
+							'Express',
+							'MongoDB',
+							'SQL',
+							'React',
+							'React Native',
+							'tailwindcss',
+							'etc.',
+						],
+					},
+					{
+						name: 'other',
+						value: ['Unix', 'Trello', 'Figma', 'Git'],
+					},
+					{
+						name: 'language',
+						value: ['English (B2)'],
+					},
+				]}
+			/>
 		</Layout>
 	);
 };
