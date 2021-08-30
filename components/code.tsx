@@ -15,11 +15,11 @@ export const SelfClosingComponent: React.FC<ComponentProps> = ({
 	props,
 }: ComponentProps) => {
 	return (
-		<pre>
+		<section>
 			<Component>{`<${capitalizeFirstLetter(name)}`}</Component>
 			<PropList array={props || []} />
 			<Component>{'/>'}</Component>
-		</pre>
+		</section>
 	);
 };
 
@@ -33,13 +33,13 @@ export const ParentComponent: React.FC<ParentComponentProps> = ({
 	children,
 }: ParentComponentProps) => {
 	return (
-		<pre className="parent-container">
+		<section className="parent-container">
 			<Component>{`<${capitalizeFirstLetter(name)}`}</Component>
 			<PropList array={props || []} />
-			<Component>{'>'}</Component>
+			<Component>{'>\n'}</Component>
 			{children}
-			<Component>{`</${name}>`}</Component>
-		</pre>
+			<Component>{`</${name}>\n`}</Component>
+		</section>
 	);
 };
 
@@ -53,7 +53,7 @@ export const LinkComponent: React.FC<LinkComponentProps> = ({
 	href,
 }: LinkComponentProps) => {
 	return (
-		<pre>
+		<section>
 			<Component>
 				{`<`}
 				<LinkSwitcher
@@ -61,8 +61,8 @@ export const LinkComponent: React.FC<LinkComponentProps> = ({
 					navigation={!!navigation}
 					href={href}
 				/>
-				{' />'}
+				{' />\n'}
 			</Component>
-		</pre>
+		</section>
 	);
 };

@@ -1,7 +1,8 @@
 import { NextPage } from 'next';
-import Head from 'next/head';
 import { LinkComponent, ParentComponent } from '../../components/code';
 import Layout from '../../components/layout';
+
+// TODO: implement routes for each induvidual project? [name].tsx?
 
 const Contacts: NextPage = () => {
 	return (
@@ -32,7 +33,7 @@ const Contacts: NextPage = () => {
 							name: 'description',
 							value: 'Covid site with more data from Hungary.',
 						},
-						{ name: 'type', value: 'MERN Stack' },
+						{ name: 'type', value: 'MERN App' },
 					]}
 				>
 					<LinkComponent
@@ -42,6 +43,23 @@ const Contacts: NextPage = () => {
 					<LinkComponent
 						name="Github"
 						href="https://github.com/ducktordanny/hungarycovid"
+					/>
+				</ParentComponent>
+				<label htmlFor="separating">{`  {/* -------------------- */}`}</label>
+				<ParentComponent
+					name="Project"
+					props={[
+						{ name: 'name', value: 'React Falling Emojis' },
+						{
+							name: 'description',
+							value: 'Choose your emojis and make a rain with them. (not released)',
+						},
+						{ name: 'type', value: 'React Library' },
+					]}
+				>
+					<LinkComponent
+						name="Github"
+						href="https://github.com/ducktordanny/react-falling-emojis"
 					/>
 				</ParentComponent>
 				<label htmlFor="separating">{`  {/* -------------------- */}`}</label>

@@ -5,5 +5,7 @@
 -   [x] Update Layout component to contain the Navigation part
 -   [x] Make it responsive for mobile.
 -   [x] Add more design elements to Figma.
+-   [x] Remove multiple pre tag and use \n and \t tags. Pre tag should be at the top level.
 -   [ ] Implement JSON handling and move main data there?
 -   [ ] Fixes and improvements.
+-   [ ] Add typing animation.

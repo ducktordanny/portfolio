@@ -34,6 +34,6 @@ body {
 	color: #fff;
 }
 
-.parent-container > pre {
+.parent-container > section {
 	margin-left: 2ch;
 }

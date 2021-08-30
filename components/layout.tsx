@@ -9,27 +9,23 @@ interface LayoutProps {
 	children: React.ReactNode;
 }
 
-// TODO: Fix horizontal overlfow.
 export default function Layout({ children }: LayoutProps) {
 	useScaleIn('main', 1);
 	useSlideUp('footer', 0.7);
 
 	return (
-		<div className="h-full flex flex-col items-center justify-between min-h-screen px-2 py-6 text-sm sm:p-8 sm:text-base lg:text-lg xl:text-xl">
+		<div className="h-full flex flex-col items-center justify-between min-h-screen px-2 py-6 text-xs sm:p-8 sm:text-sm md:text-base lg:text-lg xl:text-xl">
 			<Logo className="mx-auto" />
-			<main className="max-w-full bg-code rounded-2xl opacity-0 px-3 mt-6 sm:px-6 sm:mt-8">
-				<Tip
-					className="mt-3 sm:mt-6"
-					label="The bold underlined texts can be clicked."
-				/>
-				<div className="overflow-x-auto py-3 sm:py-6 lg:py-8">
+			<main className="overflow-x-auto max-w-full bg-code rounded-md md:rounded-2xl opacity-0 mt-6 sm:mt-8">
+				<pre id="main-info" className="inline-block p-3 sm:p-6 lg:p-8">
+					<Tip label="The bold underlined texts can be clicked." />
 					<ParentComponent name="DucktorDanny">
 						<Navigation
 							paths={['home', 'skills', 'projects', 'contacts']}
 						/>
 						{children}
 					</ParentComponent>
-				</div>
+				</pre>
 			</main>
 			<footer className="mt-6 text-center  text-white opacity-0 sm:pt-8">
 				Copyright © 2021 Daniel Lazar.

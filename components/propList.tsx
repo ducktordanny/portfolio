@@ -21,6 +21,6 @@ export const PropList: React.FC<PropListProps> = ({ array }: PropListProps) => (
 				<StyledProp value={value} />
 			</React.Fragment>
 		))}
-		{array.length > 1 && <br />}
+		{array.length > 1 && '\n'}
 	</>
 );
