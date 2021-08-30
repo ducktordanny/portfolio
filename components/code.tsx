@@ -50,6 +50,7 @@ export interface LinkComponentProps extends ComponentProps, LinkProps {
 export const LinkComponent: React.FC<LinkComponentProps> = ({
 	name,
 	navigation,
+	props,
 	href,
 }: LinkComponentProps) => {
 	return (
@@ -61,6 +62,7 @@ export const LinkComponent: React.FC<LinkComponentProps> = ({
 					navigation={!!navigation}
 					href={href}
 				/>
+				<PropList array={props || []} />
 				{' />\n'}
 			</Component>
 		</section>
