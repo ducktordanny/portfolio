@@ -10,6 +10,8 @@ I think the first two might be kind of onbious if you have ever worked with Reac
 
 The goal is that I want to be able to make some JSON files with the data what should be displayed on the site.
 
+(SECRET: https://ducktordanny.com/api/secret BE CAREFUL 😎)
+
 ## Made with
 
 Made with the fantastic Next.js and also used TypeScript, tailwindcss and gsap.
