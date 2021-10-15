@@ -1,5 +1,4 @@
 import { NextPage } from 'next';
-import Head from 'next/head';
 import { LinkComponent, ParentComponent } from '../components/code';
 import Layout from '../components/layout';
 
