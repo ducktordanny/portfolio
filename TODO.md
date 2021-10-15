@@ -9,3 +9,4 @@
 -   [ ] Implement JSON handling and move main data there?
 -   [ ] Fixes and improvements.
 -   [ ] Add typing animation.
+-   [ ] Make a cleaner README if the JSON handling is implemented.
