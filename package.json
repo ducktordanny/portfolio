@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "gsap": "^3.7.1",
-    "next": "11.1.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "next": "12",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@types/react": "17.0.19",
