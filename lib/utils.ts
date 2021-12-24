@@ -2,21 +2,21 @@
  * After that number of elements it inserts a new line.
  * */
 export function handleArrayDisplaying(
-	array: any[],
-	maxElementsInOneRow: number
+  array: any[],
+  maxElementsInOneRow: number
 ) {
-	let result = '';
+  let result = '';
 
-	array.forEach((element, index) => {
-		const shouldInsert = !((index + 1) % maxElementsInOneRow);
-		if (index + 1 === array.length) result += element;
-		else if (shouldInsert) result += element + "', " + '\n    ' + "'";
-		else result += element + "', '";
-	});
+  array.forEach((element, index) => {
+    const shouldInsert = !((index + 1) % maxElementsInOneRow);
+    if (index + 1 === array.length) result += element;
+    else if (shouldInsert) result += element + "', " + '\n    ' + "'";
+    else result += element + "', '";
+  });
 
-	return result;
+  return result;
 }
 
 export function capitalizeFirstLetter(text: string) {
-	return text[0].toUpperCase() + text.slice(1);
+  return text[0].toUpperCase() + text.slice(1);
 }

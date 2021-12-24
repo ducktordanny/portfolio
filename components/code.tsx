@@ -6,65 +6,65 @@ import { capitalizeFirstLetter } from '../lib/utils';
 import LinkSwitcher from './linkSwitcher';
 
 export interface ComponentProps {
-	name: string;
-	props?: PropsObject;
+  name: string;
+  props?: PropsObject;
 }
 
 export const SelfClosingComponent: React.FC<ComponentProps> = ({
-	name,
-	props,
+  name,
+  props,
 }: ComponentProps) => {
-	return (
-		<section>
-			<Component>{`<${capitalizeFirstLetter(name)}`}</Component>
-			<PropList array={props || []} />
-			<Component>{'/>'}</Component>
-		</section>
-	);
+  return (
+    <section>
+      <Component>{`<${capitalizeFirstLetter(name)}`}</Component>
+      <PropList array={props || []} />
+      <Component>{'/>'}</Component>
+    </section>
+  );
 };
 
 export interface ParentComponentProps extends ComponentProps {
-	children: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export const ParentComponent: React.FC<ParentComponentProps> = ({
-	name,
-	props,
-	children,
+  name,
+  props,
+  children,
 }: ParentComponentProps) => {
-	return (
-		<section className="parent-container">
-			<Component>{`<${capitalizeFirstLetter(name)}`}</Component>
-			<PropList array={props || []} />
-			<Component>{'>\n'}</Component>
-			{children}
-			<Component>{`</${name}>\n`}</Component>
-		</section>
-	);
+  return (
+    <section className="parent-container">
+      <Component>{`<${capitalizeFirstLetter(name)}`}</Component>
+      <PropList array={props || []} />
+      <Component>{'>\n'}</Component>
+      {children}
+      <Component>{`</${name}>\n`}</Component>
+    </section>
+  );
 };
 
 export interface LinkComponentProps extends ComponentProps, LinkProps {
-	navigation?: boolean;
+  navigation?: boolean;
 }
 
 export const LinkComponent: React.FC<LinkComponentProps> = ({
-	name,
-	navigation,
-	props,
-	href,
+  name,
+  navigation,
+  props,
+  href,
 }: LinkComponentProps) => {
-	return (
-		<section>
-			<Component>
-				{`<`}
-				<LinkSwitcher
-					label={capitalizeFirstLetter(name)}
-					navigation={!!navigation}
-					href={href}
-				/>
-				<PropList array={props || []} />
-				{' />\n'}
-			</Component>
-		</section>
-	);
+  return (
+    <section>
+      <Component>
+        {`<`}
+        <LinkSwitcher
+          label={capitalizeFirstLetter(name)}
+          navigation={!!navigation}
+          href={href}
+        />
+        <PropList array={props || []} />
+        {' />\n'}
+      </Component>
+    </section>
+  );
 };

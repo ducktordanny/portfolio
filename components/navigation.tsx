@@ -4,47 +4,47 @@ import { LinkComponent, ParentComponent } from './code';
 import { capitalizeFirstLetter } from '../lib/utils';
 
 export interface NavigationProps {
-	paths: string[];
+  paths: string[];
 }
 
 const Navigation: React.FC<NavigationProps> = ({ paths }: NavigationProps) => {
-	/** Get current path withouth the slash. */
-	const currentPath = useRouter().pathname.slice(1);
+  /** Get current path withouth the slash. */
+  const currentPath = useRouter().pathname.slice(1);
 
-	/** Returns props value for ParentComponent. */
-	const getCurrentPage = () => {
-		if (paths.includes(currentPath)) {
-			return [
-				{
-					name: 'currentlyOn',
-					value: capitalizeFirstLetter(currentPath),
-				},
-			];
-		}
-		return [];
-	};
+  /** Returns props value for ParentComponent. */
+  const getCurrentPage = () => {
+    if (paths.includes(currentPath)) {
+      return [
+        {
+          name: 'currentlyOn',
+          value: capitalizeFirstLetter(currentPath),
+        },
+      ];
+    }
+    return [];
+  };
 
-	return (
-		<ParentComponent name="Navigation" props={getCurrentPage()}>
-			<Head>
-				<meta
-					name="viewport"
-					content="width=device-width, initial-scale=1, viewport-fit=cover"
-				/>
-				<title>{capitalizeFirstLetter(currentPath)}</title>
-			</Head>
-			{paths
-				.filter((path) => path !== currentPath)
-				.map((path, index) => (
-					<LinkComponent
-						key={`${path}-${index}`}
-						name={path}
-						navigation
-						href={`/${path}`}
-					/>
-				))}
-		</ParentComponent>
-	);
+  return (
+    <ParentComponent name="Navigation" props={getCurrentPage()}>
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
+        <title>{capitalizeFirstLetter(currentPath)}</title>
+      </Head>
+      {paths
+        .filter((path) => path !== currentPath)
+        .map((path, index) => (
+          <LinkComponent
+            key={`${path}-${index}`}
+            name={path}
+            navigation
+            href={`/${path}`}
+          />
+        ))}
+    </ParentComponent>
+  );
 };
 
 export default Navigation;
