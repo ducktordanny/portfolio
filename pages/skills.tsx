@@ -1,6 +1,6 @@
-import { NextPage } from "next";
-import { SelfClosingComponent } from "../components/code";
-import Layout from "../components/layout";
+import { NextPage } from 'next';
+import { SelfClosingComponent } from '../components/code';
+import Layout from '../components/layout';
 
 const Skills: NextPage = () => {
   return (
@@ -9,30 +9,30 @@ const Skills: NextPage = () => {
         name="Skills"
         props={[
           {
-            name: "code",
+            name: 'code',
             value: [
-              "HTML",
-              "CSS",
-              "JavaScript",
-              "TypeScript",
-              "NodeJS",
-              "Express",
-              "MongoDB",
-              "SQL",
-              "Angular",
-              "React",
-              "React Native",
-              "tailwindcss",
-              "etc.",
+              'HTML',
+              'CSS',
+              'JavaScript',
+              'TypeScript',
+              'NodeJS',
+              'Express',
+              'MongoDB',
+              'SQL',
+              'Angular',
+              'React',
+              'React Native',
+              'tailwindcss',
+              'etc.',
             ],
           },
           {
-            name: "other",
-            value: ["Unix", "Trello", "Figma", "Git"],
+            name: 'other',
+            value: ['Unix', 'Trello', 'Figma', 'Git'],
           },
           {
-            name: "language",
-            value: ["English (B2)"],
+            name: 'language',
+            value: ['English (B2)'],
           },
         ]}
       />

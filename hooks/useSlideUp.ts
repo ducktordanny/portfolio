@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 
 const useSlideUp = (element: string, duration: number) => {
   useEffect(() => {
@@ -12,7 +12,7 @@ const useSlideUp = (element: string, duration: number) => {
       {
         opacity: 1,
         yPercent: 0,
-        ease: "back.out(1)",
+        ease: 'back.out(1)',
         duration,
       }
     );

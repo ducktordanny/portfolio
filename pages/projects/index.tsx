@@ -1,6 +1,6 @@
-import { NextPage } from "next";
-import { LinkComponent, ParentComponent } from "../../components/code";
-import Layout from "../../components/layout";
+import { NextPage } from 'next';
+import { LinkComponent, ParentComponent } from '../../components/code';
+import Layout from '../../components/layout';
 
 // TODO: implement routes for each induvidual project? [name].tsx?
 
@@ -11,12 +11,12 @@ const Contacts: NextPage = () => {
         <ParentComponent
           name="FeaturedProject"
           props={[
-            { name: "name", value: "FamsList" },
+            { name: 'name', value: 'FamsList' },
             {
-              name: "description",
-              value: "Share a shopping list with your family or friends.",
+              name: 'description',
+              value: 'Share a shopping list with your family or friends.',
             },
-            { name: "type", value: "Mobile App" },
+            { name: 'type', value: 'Mobile App' },
           ]}
         >
           <LinkComponent
@@ -28,13 +28,13 @@ const Contacts: NextPage = () => {
         <ParentComponent
           name="FeaturedProject"
           props={[
-            { name: "name", value: "DucktorBlog" },
+            { name: 'name', value: 'DucktorBlog' },
             {
-              name: "description",
+              name: 'description',
               value:
-                "Making a blog what has authentication and all sorts of stuff with Angular and NestJS just for fun.",
+                'Making a blog what has authentication and all sorts of stuff with Angular and NestJS just for fun.',
             },
-            { name: "type", value: "Full Stack Web App" },
+            { name: 'type', value: 'Full Stack Web App' },
           ]}
         >
           <LinkComponent
@@ -46,12 +46,12 @@ const Contacts: NextPage = () => {
         <ParentComponent
           name="Project"
           props={[
-            { name: "name", value: "Hungary Covid" },
+            { name: 'name', value: 'Hungary Covid' },
             {
-              name: "description",
-              value: "Covid site with more data from Hungary.",
+              name: 'description',
+              value: 'Covid site with more data from Hungary.',
             },
-            { name: "type", value: "MERN App" },
+            { name: 'type', value: 'MERN App' },
           ]}
         >
           <LinkComponent
@@ -67,13 +67,13 @@ const Contacts: NextPage = () => {
         <ParentComponent
           name="Project"
           props={[
-            { name: "name", value: "React Falling Emojis" },
+            { name: 'name', value: 'React Falling Emojis' },
             {
-              name: "description",
+              name: 'description',
               value:
-                "Choose your emojis and make a rain with them. (not released)",
+                'Choose your emojis and make a rain with them. (not released)',
             },
-            { name: "type", value: "React Library" },
+            { name: 'type', value: 'React Library' },
           ]}
         >
           <LinkComponent
@@ -85,12 +85,12 @@ const Contacts: NextPage = () => {
         <ParentComponent
           name="Project"
           props={[
-            { name: "name", value: "JSX Portfolio" },
+            { name: 'name', value: 'JSX Portfolio' },
             {
-              name: "description",
-              value: "A simple, but unique JSX style portfolio.",
+              name: 'description',
+              value: 'A simple, but unique JSX style portfolio.',
             },
-            { name: "type", value: "Next.js App" },
+            { name: 'type', value: 'Next.js App' },
           ]}
         >
           <LinkComponent

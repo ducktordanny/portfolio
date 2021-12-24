@@ -1,6 +1,6 @@
-import { NextPage } from "next";
-import { SelfClosingComponent } from "../components/code";
-import Layout from "../components/layout";
+import { NextPage } from 'next';
+import { SelfClosingComponent } from '../components/code';
+import Layout from '../components/layout';
 
 const XMas: NextPage = () => {
   return (
@@ -9,16 +9,16 @@ const XMas: NextPage = () => {
         name="Wish"
         props={[
           {
-            name: "to",
-            value: "you",
+            name: 'to',
+            value: 'you',
           },
           {
-            name: "what",
-            value: "Merry Christmas! 🎄",
+            name: 'what',
+            value: 'Merry Christmas! 🎄',
           },
           {
-            name: "andLater",
-            value: "Happy New Year! 🎉",
+            name: 'andLater',
+            value: 'Happy New Year! 🎉',
           },
         ]}
       />

@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import gsap from "gsap";
+import { useEffect } from 'react';
+import gsap from 'gsap';
 
 const useScaleUp = (element: string, duration: number) => {
   useEffect(() => {
