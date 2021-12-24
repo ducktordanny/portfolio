@@ -17,7 +17,7 @@ const XMas: NextPage = () => {
             value: "Merry Christmas! 🎄",
           },
           {
-            name: "and",
+            name: "andLater",
             value: "Happy New Year! 🎉",
           },
         ]}
