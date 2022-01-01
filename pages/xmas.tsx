@@ -1,8 +1,10 @@
 import { NextPage } from 'next';
 import { SelfClosingComponent } from '../components/code';
 import Layout from '../components/layout';
+import NotFound from './404';
 
 const XMas: NextPage = () => {
+  return <NotFound />;
   return (
     <Layout>
       <SelfClosingComponent

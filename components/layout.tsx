@@ -27,7 +27,7 @@ export default function Layout({ children }: LayoutProps) {
         </pre>
       </main>
       <footer className="mt-6 text-center  text-white opacity-0 sm:pt-8">
-        Copyright © 2021 Daniel Lazar.
+        Copyright © 2022 Daniel Lazar.
       </footer>
     </div>
   );

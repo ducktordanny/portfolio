@@ -11,7 +11,8 @@ module.exports = {
     colors: {
       comp: {
         DEFAULT: '#ffd665',
-        link: '#ff6565',
+        link: '#ffe7a6',
+        linkHover: '#ff1665',
       },
       prop: {
         DEFAULT: '#7aacff',

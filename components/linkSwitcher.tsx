@@ -5,18 +5,16 @@ export interface LinkSwitcherProps extends LinkProps {
   navigation: boolean;
 }
 
+const linkSwitcherClasses =
+  'text-comp-link font-bold underline transition duration-500 hover:text-comp-linkHover';
+
 const LinkSwitcher = ({ label, navigation, href }: LinkSwitcherProps) =>
   navigation ? (
     <Link href={href}>
-      <a className="text-comp font-bold underline transition duration-500 hover:text-comp-link">
-        {label}
-      </a>
+      <a className={linkSwitcherClasses}>{label}</a>
     </Link>
   ) : (
-    <a
-      className="text-comp font-bold underline transition duration-500 hover:text-comp-link"
-      href={href + ''}
-    >
+    <a className={linkSwitcherClasses} href={href + ''}>
       {label}
     </a>
   );
