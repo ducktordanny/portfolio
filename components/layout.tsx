@@ -1,4 +1,3 @@
-import useScaleIn from '../hooks/useScaleIn';
 import useScaleUp from '../hooks/useSlaceUp';
 import useSlideUp from '../hooks/useSlideUp';
 import { ParentComponent } from './code';
