@@ -11,9 +11,6 @@ const Skills: NextPage = () => {
           {
             name: 'code',
             value: [
-              'HTML',
-              'CSS',
-              'JavaScript',
               'TypeScript',
               'NodeJS',
               'Express',
@@ -23,6 +20,7 @@ const Skills: NextPage = () => {
               'React',
               'React Native',
               'tailwindcss',
+              'cypress',
               'etc.',
             ],
           },
