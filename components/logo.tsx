@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import useSlideDown from '../hooks/useSlideDown';
-import LogoSvg from '../public/logo_new_year.svg';
+import LogoSvg from '../public/logo.svg';
 
 interface LogoProps {
   className?: string | undefined;
