@@ -3,11 +3,11 @@ import { SelfClosingComponent } from '../components/code';
 import Layout from '../components/layout';
 
 const Home: NextPage = () => {
-  // const getAge = (birthdayString: string) => {
-  // 	const ageInMillisecs = Date.now() - new Date(birthdayString).getTime();
-  // 	const ageDate = new Date(ageInMillisecs);
-  // 	return Math.abs(ageDate.getFullYear() - 1970);
-  // };
+  const getAge = (birthdayString: string): number => {
+  	const ageInMilliseconds = Date.now() - new Date(birthdayString).getTime();
+  	const ageDate = new Date(ageInMilliseconds);
+  	return Math.abs(ageDate.getFullYear() - 1970);
+  };
 
   return (
     <Layout>
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         name="PersonalInfo"
         props={[
           { name: 'fullName', value: 'Daniel Lazar' },
-          { name: 'age', value: 20 },
+          { name: 'age', value: getAge('2001. 01. 12.') },
           { name: 'country', value: 'Hungary' },
           { name: 'school', value: 'University of Pannonia' },
           {
