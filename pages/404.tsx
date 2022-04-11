@@ -1,8 +1,8 @@
-import { NextPage } from 'next';
+import React from "react";
 import { SelfClosingComponent } from '../components/code';
 import Layout from '../components/layout';
 
-const NotFound: NextPage = () => (
+const NotFound: React.FC = () => (
   <Layout>
     <SelfClosingComponent
       name="Error"

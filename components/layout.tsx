@@ -7,18 +7,18 @@ import Footer from './footer';
 import Head from 'next/head';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import {ReactNode, useEffect, useState} from 'react';
 import { capitalizeFirstLetter } from '../helper/utils';
 import {Button, Tooltip} from '@mui/material';
 import useSlideDown from '../hooks/useSlideDown';
 
 interface LayoutProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export default function Layout({ children }: LayoutProps) {
   const router = useRouter();
-  const [title, setTitle] = useState<string>('');
+  const [title, setTitle] = useState<string>('DucktorDanny');
   useSlideDown('#gift-button', 1);
   useScaleUp('main', 1);
 
@@ -33,8 +33,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <Head>
-        <title>{{ title }}</title>
-        <meta name="theme-color" content="4b839e" />
+        <title>{title}</title>
       </Head>
       <div className="h-full flex flex-col items-center justify-between min-h-screen px-2 py-6 text-xs sm:p-8 sm:text-sm md:text-base lg:text-lg xl:text-xl">
         <Tooltip title="Collect your special gift!">

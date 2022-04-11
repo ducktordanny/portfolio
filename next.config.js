@@ -10,8 +10,4 @@ module.exports = {
       },
     ];
   },
-  typescript: {
-    // FIXME [2022-04-20]: https://github.com/vercel/next.js/issues/36019
-    ignoreBuildErrors: true,
-  },
 };
