@@ -2,8 +2,8 @@ import React from 'react';
 import { LinkProps } from 'next/link';
 import { Component } from './colored';
 import { PropList, PropsObject } from './propList';
-import { capitalizeFirstLetter } from '../lib/utils';
-import LinkSwitcher from './linkSwitcher';
+import { capitalizeFirstLetter } from '../helper/utils';
+import LinkSwitcher, {linkSwitcherClasses} from './linkSwitcher';
 
 export interface ComponentProps {
   name: string;
@@ -62,6 +62,27 @@ export const LinkComponent: React.FC<LinkComponentProps> = ({
           navigation={!!navigation}
           href={href}
         />
+        <PropList array={props || []} />
+        {' />\n'}
+      </Component>
+    </section>
+  );
+};
+
+export interface ButtonComponentProps extends ComponentProps {
+  onClick: () => void;
+}
+
+export const ButtonComponent: React.FC<ButtonComponentProps> = ({
+  name,
+  props,
+  onClick,
+}: ButtonComponentProps) => {
+  return (
+    <section>
+      <Component>
+        {`<`}
+        <label className={linkSwitcherClasses} onClick={onClick}>{name}</label>
         <PropList array={props || []} />
         {' />\n'}
       </Component>

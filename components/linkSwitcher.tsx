@@ -5,8 +5,8 @@ export interface LinkSwitcherProps extends LinkProps {
   navigation: boolean;
 }
 
-const linkSwitcherClasses =
-  'text-comp-link font-bold underline transition duration-500 hover:text-comp-linkHover';
+export const linkSwitcherClasses =
+  'text-comp-link font-bold underline transition duration-500 cursor-pointer hover:text-comp-linkHover';
 
 const LinkSwitcher = ({ label, navigation, href }: LinkSwitcherProps) =>
   navigation ? (

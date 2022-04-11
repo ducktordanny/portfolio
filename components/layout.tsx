@@ -4,6 +4,7 @@ import { ParentComponent } from './code';
 import Logo from './logo';
 import Navigation from './navigation';
 import Tip from './tip';
+import Footer from "./footer";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -11,7 +12,6 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   useScaleUp('main', 1);
-  useSlideUp('footer', 0.7);
 
   return (
     <div className="h-full flex flex-col items-center justify-between min-h-screen px-2 py-6 text-xs sm:p-8 sm:text-sm md:text-base lg:text-lg xl:text-xl">
@@ -25,9 +25,7 @@ export default function Layout({ children }: LayoutProps) {
           </ParentComponent>
         </pre>
       </main>
-      <footer className="mt-6 text-center  text-white opacity-0 sm:pt-8">
-        Copyright © 2022 Daniel Lazar.
-      </footer>
+      <Footer />
     </div>
   );
 }

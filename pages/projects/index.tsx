@@ -1,10 +1,16 @@
 import { NextPage } from 'next';
 import { LinkComponent, ParentComponent } from '../../components/code';
 import Layout from '../../components/layout';
+import useRecordAnalytic from "../../hooks/useRecordAnalytic";
+import {LinearProgress} from "@mui/material";
 
 // TODO: implement routes for each induvidual project? [name].tsx?
 
 const Contacts: NextPage = () => {
+  const loading = useRecordAnalytic();
+
+  if (loading) return <LinearProgress />;
+
   return (
     <Layout>
       <ParentComponent name="ProjectsContainer">

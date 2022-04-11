@@ -6,6 +6,7 @@ module.exports = {
       backgroundImage: (theme) => ({
         'jsx-portfolio': 'linear-gradient(to bottom, #4b839e, #000000)',
         code: 'linear-gradient(-45deg, #4c4c4c, #2c2c2c)',
+        form: 'linear-gradient(-45deg, #828282, #f2fcff)',
       }),
     },
     colors: {

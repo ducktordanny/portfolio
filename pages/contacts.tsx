@@ -1,8 +1,14 @@
 import { NextPage } from 'next';
 import { LinkComponent, ParentComponent } from '../components/code';
 import Layout from '../components/layout';
+import {LinearProgress} from "@mui/material";
+import useRecordAnalytic from "../hooks/useRecordAnalytic";
 
 const Contacts: NextPage = () => {
+  const loading = useRecordAnalytic();
+
+  if (loading) return <LinearProgress />;
+
   return (
     <Layout>
       <ParentComponent name="Contacts">

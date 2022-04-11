@@ -1,6 +1,8 @@
 import type { NextPage } from 'next';
 import { SelfClosingComponent } from '../components/code';
 import Layout from '../components/layout';
+import useRecordAnalytic from "../hooks/useRecordAnalytic";
+import {LinearProgress} from "@mui/material";
 
 const Home: NextPage = () => {
   const getAge = (birthdayString: string): number => {
@@ -8,6 +10,9 @@ const Home: NextPage = () => {
   	const ageDate = new Date(ageInMilliseconds);
   	return Math.abs(ageDate.getFullYear() - 1970);
   };
+  const loading = useRecordAnalytic();
+
+  if (loading) return <LinearProgress />;
 
   return (
     <Layout>
