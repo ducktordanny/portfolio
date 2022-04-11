@@ -1,8 +1,8 @@
 import { NextPage } from 'next';
 import { LinkComponent, ParentComponent } from '../../components/code';
 import Layout from '../../components/layout';
-import useRecordAnalytic from "../../hooks/useRecordAnalytic";
-import {LinearProgress} from "@mui/material";
+import useRecordAnalytic from '../../hooks/useRecordAnalytic';
+import { LinearProgress } from '@mui/material';
 
 // TODO: implement routes for each induvidual project? [name].tsx?
 
@@ -15,6 +15,27 @@ const Contacts: NextPage = () => {
     <Layout>
       <ParentComponent name="ProjectsContainer">
         <ParentComponent
+          name="Project"
+          props={[
+            { name: 'name', value: 'Opres' },
+            {
+              name: 'description',
+              value: 'An app to help calculating operation research problems.',
+            },
+            { name: 'type', value: 'Nx: Angular + NestJs' },
+          ]}
+        >
+          <LinkComponent
+            name="CheckOut"
+            href="https://opres-help.herokuapp.com"
+          />
+          <LinkComponent
+            name="Github"
+            href="https://github.com/ducktordanny/opres"
+          />
+        </ParentComponent>
+        <label htmlFor="separating">{`  {/* -------------------- */}`}</label>
+        <ParentComponent
           name="FeaturedProject"
           props={[
             { name: 'name', value: 'FamsList' },
@@ -22,7 +43,7 @@ const Contacts: NextPage = () => {
               name: 'description',
               value: 'Share a shopping list with your family or friends.',
             },
-            { name: 'type', value: 'Mobile App' },
+            { name: 'type', value: 'React Native + Express' },
           ]}
         >
           <LinkComponent
@@ -40,7 +61,7 @@ const Contacts: NextPage = () => {
               value:
                 'Making a blog what has authentication and all sorts of stuff with Angular and NestJS just for fun.',
             },
-            { name: 'type', value: 'Full Stack Web App' },
+            { name: 'type', value: 'Nx: Angular + NestJs' },
           ]}
         >
           <LinkComponent

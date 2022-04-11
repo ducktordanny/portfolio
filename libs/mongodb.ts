@@ -1,4 +1,4 @@
-import { MongoClient } from "mongodb";
+import { MongoClient } from 'mongodb';
 
 const MONGODB_URI = process.env.URI;
 
@@ -8,7 +8,7 @@ let cachedDb: any = null;
 export async function connectToDatabase() {
   // check the MongoDB URI
   if (!MONGODB_URI) {
-    throw new Error("Define the MONGODB_URI environmental variable");
+    throw new Error('Define the MONGODB_URI environmental variable');
   }
 
   // check the cached.

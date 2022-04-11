@@ -1,4 +1,4 @@
-import useSlideUp from "../hooks/useSlideUp";
+import useSlideUp from '../hooks/useSlideUp';
 
 const Footer = () => {
   useSlideUp('footer', 0.7);
