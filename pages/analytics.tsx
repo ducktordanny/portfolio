@@ -1,6 +1,6 @@
 import {FormEvent, useState} from "react";
 import {NextPage} from "next";
-import {Button, TextField} from '@mui/material';
+import {Button, CircularProgress, TextField} from '@mui/material';
 import Footer from '../components/footer';
 import Logo from "../components/logo";
 import {ButtonComponent, SelfClosingComponent, ParentComponent} from "../components/code";
@@ -8,9 +8,11 @@ import {AnalyticView} from "./api/view";
 
 const Analytics: NextPage = () => {
   const [analytics, setAnalytics] = useState<Array<AnalyticView> | null>(null);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    setLoading(true);
     event.preventDefault();
     const formData = new FormData(event.target as HTMLFormElement);
     const pass = formData.get('password');
@@ -22,7 +24,7 @@ const Analytics: NextPage = () => {
       },
     });
     const resData = await response.json();
-    console.log(resData);
+    setLoading(false);
     if (resData.error) return setError(resData.error);
     setError(null);
     setAnalytics(resData as Array<AnalyticView>);
@@ -48,18 +50,20 @@ const Analytics: NextPage = () => {
   }
 
   const PasswordField = () => (
-    <form className="flex flex-col p-3 sm:p-6 lg:p-8" onSubmit={handleSubmit}>
+    <form className="flex flex-col items-center p-3 sm:p-6 lg:p-8" onSubmit={handleSubmit}>
+      {loading && <CircularProgress className="mb-4" />}
       <TextField
         className="mb-4"
         id="password"
         name="password"
         type="password"
         label="password"
+        disabled={loading}
         error={!!error}
         helperText={error ? error : ''}
         required
       />
-      <Button type="submit" variant="contained">Get analytics</Button>
+      <Button className="w-full" type="submit" variant="contained" disabled={loading}>Get analytics</Button>
     </form>
   );
 

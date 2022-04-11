@@ -9,7 +9,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(401).json({error: 'Invalid password!'});
     const {db} = await connectToDatabase();
     const analytics = await db.collection('analytics').find().toArray();
-    console.log(analytics);
     res.json(analytics);
   } else res.status(404).send('');
 }
