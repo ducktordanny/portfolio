@@ -41,3 +41,12 @@ body {
 .password-field {
   margin-bottom: 10px !important;
 }
+
+button.gift-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  border-radius: 9999px;
+  z-index: 10;
+}
