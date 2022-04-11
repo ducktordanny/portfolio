@@ -53,7 +53,7 @@ const Analytics: NextPage = () => {
     <form className="flex flex-col items-center p-3 sm:p-6 lg:p-8" onSubmit={handleSubmit}>
       {loading && <CircularProgress className="mb-4" />}
       <TextField
-        className="mb-4"
+        className="password-field"
         id="password"
         name="password"
         type="password"

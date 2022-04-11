@@ -37,3 +37,7 @@ body {
 .parent-container > section {
   margin-left: 2ch;
 }
+
+.password-field {
+  margin-bottom: 10px !important;
+}
