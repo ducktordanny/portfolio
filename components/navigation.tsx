@@ -1,14 +1,15 @@
+import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { LinkComponent, ParentComponent } from './code';
-import { capitalizeFirstLetter } from '../lib/utils';
+import { capitalizeFirstLetter } from '../helper/utils';
 
 export interface NavigationProps {
   paths: string[];
 }
 
 const Navigation: React.FC<NavigationProps> = ({ paths }: NavigationProps) => {
-  /** Get current path withouth the slash. */
+  /** Get current path without the slash. */
   const currentPath = useRouter().pathname.slice(1);
 
   /** Returns props value for ParentComponent. */

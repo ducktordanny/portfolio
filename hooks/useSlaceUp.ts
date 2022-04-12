@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import gsap from 'gsap';
 
 const useScaleUp = (element: string, duration: number) => {
-  useEffect(() => {
+  const trigger = () => {
     gsap.fromTo(
       element,
       {
@@ -15,7 +15,13 @@ const useScaleUp = (element: string, duration: number) => {
         duration,
       }
     );
-  });
+  };
+
+  useEffect(() => {
+    trigger();
+  }, []);
+
+  return trigger;
 };
 
 export default useScaleUp;

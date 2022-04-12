@@ -1,4 +1,4 @@
-import { handleArrayDisplaying } from '../lib/utils';
+import { handleArrayDisplaying } from '../helper/utils';
 import { Component, Nmbr, Str } from './colored';
 
 export const NumberProp = ({ value }: { value: number }) => (
