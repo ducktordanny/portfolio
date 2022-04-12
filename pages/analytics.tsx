@@ -21,7 +21,7 @@ const Analytics: NextPage = () => {
   const fetchAnalytics = async (inputPass: string) => {
     const response = await fetch('api/analytics', {
       method: 'POST',
-      body: JSON.stringify({pass: inputPass}),
+      body: JSON.stringify({ pass: inputPass }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -104,7 +104,10 @@ const Analytics: NextPage = () => {
       <pre>
         <ParentComponent name="Analytics">
           {getAnalytics()}
-          <ButtonComponent name="Refresh" onClick={() => fetchAnalytics(pass)} />
+          <ButtonComponent
+            name="Refresh"
+            onClick={() => fetchAnalytics(pass)}
+          />
           <ButtonComponent name="Close" onClick={handleAnalyticsClose} />
         </ParentComponent>
       </pre>

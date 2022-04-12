@@ -7,9 +7,9 @@ import Footer from './footer';
 import Head from 'next/head';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import { useRouter } from 'next/router';
-import {ReactNode, useEffect, useState} from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { capitalizeFirstLetter } from '../helper/utils';
-import {Button, Tooltip} from '@mui/material';
+import { Button, Tooltip } from '@mui/material';
 import useSlideDown from '../hooks/useSlideDown';
 
 interface LayoutProps {

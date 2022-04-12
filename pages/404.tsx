@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { SelfClosingComponent } from '../components/code';
 import Layout from '../components/layout';
 

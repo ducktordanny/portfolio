@@ -6,9 +6,9 @@ import { LinearProgress } from '@mui/material';
 
 const Home: NextPage = () => {
   const getAge = (birthdayString: string): number => {
-  	const ageInMilliseconds = Date.now() - new Date(birthdayString).getTime();
-  	const ageDate = new Date(ageInMilliseconds);
-  	return Math.abs(ageDate.getFullYear() - 1970);
+    const ageInMilliseconds = Date.now() - new Date(birthdayString).getTime();
+    const ageDate = new Date(ageInMilliseconds);
+    return Math.abs(ageDate.getFullYear() - 1970);
   };
   const loading = useRecordAnalytic();
 

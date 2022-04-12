@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import { AnalyticViewReq } from '../pages/api/view';
 
 const useRecordAnalytic = () => {
