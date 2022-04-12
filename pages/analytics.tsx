@@ -117,9 +117,9 @@ const Analytics: NextPage = () => {
       <main
         className={`${
           analytics ? 'bg-code' : 'bg-form'
-        } max-w-full rounded-md md:rounded-2xl mt-6 sm:mt-8`}
+        } max-w-full rounded-md opacity-0 md:rounded-2xl mt-6 sm:mt-8`}
       >
-        {analytics ? AnalyticsField() : PasswordField()}
+        {analytics ? <AnalyticsField /> : <PasswordField />}
       </main>
       <Footer />
     </div>
