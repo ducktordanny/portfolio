@@ -6,9 +6,11 @@ const useRecordAnalytic = () => {
 
   useEffect(() => {
     (async () => {
+      const hostname = window.location.hostname;
+      if (hostname !== 'ducktordanny.com' && hostname !== 'ducktordanny.vercel.app') return setLoading(false);
       const analyticData: AnalyticViewReq = {
         path: window.location.pathname.replace('/', ''),
-        hostname: window.location.hostname,
+        hostname,
         lastVisited: new Date().toISOString(),
       };
       await fetch('api/view', {
