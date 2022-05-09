@@ -11,41 +11,52 @@ import {
 import { AnalyticView } from './api/view';
 import useScaleUp from '../hooks/useSlaceUp';
 
+interface User {
+  username: string;
+  password: string;
+}
+
 const Analytics: NextPage = () => {
   const [analytics, setAnalytics] = useState<Array<AnalyticView> | null>(null);
-  const [pass, setPass] = useState<string>('');
+  const [user, setUser] = useState<User | undefined>(undefined);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const trigger = useScaleUp('main', 1);
 
-  const fetchAnalytics = async (inputPass: string) => {
-    const response = await fetch('api/analytics', {
-      method: 'POST',
-      body: JSON.stringify({ pass: inputPass }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-    const resData = await response.json();
-    setLoading(false);
-    if (resData.error) return setError(resData.error);
-    setError(null);
-    setPass(inputPass || '');
-    trigger();
-    setAnalytics(resData as Array<AnalyticView>);
+  const fetchAnalytics = async (user: User) => {
+    try {
+      const response = await fetch('api/analytics', {
+        method: 'POST',
+        body: JSON.stringify(user),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      const resData = await response.json();
+      if (resData.error) throw new Error(resData.error);
+      setError(null);
+      setUser(user);
+      trigger();
+      setAnalytics(resData as Array<AnalyticView>);
+    } catch (err: any) {
+      setError(err.toString());
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     setLoading(true);
     event.preventDefault();
     const formData = new FormData(event.target as HTMLFormElement);
-    const inputPass = formData.get('password') as string;
-    await fetchAnalytics(inputPass);
+    const username = formData.get('username') as string;
+    const password = formData.get('password') as string;
+    await fetchAnalytics({username, password});
   };
 
   const handleAnalyticsClose = () => {
     trigger();
-    setPass('');
+    setUser(undefined);
     setAnalytics(null);
   };
 
@@ -78,6 +89,16 @@ const Analytics: NextPage = () => {
     >
       {loading && <CircularProgress className="mb-4" />}
       <TextField
+        className="username-field"
+        id="username"
+        name="username"
+        type="username"
+        label="username"
+        disabled={loading}
+        error={!!error}
+        required
+      />
+      <TextField
         className="password-field"
         id="password"
         name="password"
@@ -106,7 +127,7 @@ const Analytics: NextPage = () => {
           {getAnalytics()}
           <ButtonComponent
             name="Refresh"
-            onClick={() => fetchAnalytics(pass)}
+            onClick={() => user && fetchAnalytics(user)}
           />
           <ButtonComponent name="Close" onClick={handleAnalyticsClose} />
         </ParentComponent>
