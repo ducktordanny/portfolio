@@ -1,5 +1,6 @@
 import { FormEvent, useState } from 'react';
 import { NextPage } from 'next';
+import Head from "next/head";
 import { Button, CircularProgress, TextField } from '@mui/material';
 import Footer from '../components/footer';
 import Logo from '../components/logo';
@@ -137,6 +138,9 @@ const Analytics: NextPage = () => {
 
   return (
     <div className="h-full flex flex-col items-center justify-between min-h-screen px-2 py-6 text-xs sm:p-8 sm:text-sm md:text-base lg:text-lg xl:text-xl">
+      <Head>
+        <title>Analytics</title>
+      </Head>
       <Logo className="mx-auto" />
       <main
         className={`${
