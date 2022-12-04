@@ -27,7 +27,7 @@ const Home: NextPage = () => {
             name: 'majorIn',
             value: 'Computer Science Engineering Bsc',
           },
-          { name: 'status', value: 'Trainee at One Identity' },
+          { name: 'status', value: 'Software Engineer at One Identity' },
           { name: 'speaks', value: ['Hungarian', 'English'] },
         ]}
       />
