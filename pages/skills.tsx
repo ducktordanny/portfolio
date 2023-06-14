@@ -1,14 +1,8 @@
 import { NextPage } from 'next';
 import { SelfClosingComponent } from '../components/code';
 import Layout from '../components/layout';
-import useRecordAnalytic from '../hooks/useRecordAnalytic';
-import { LinearProgress } from '@mui/material';
 
 const Skills: NextPage = () => {
-  const loading = useRecordAnalytic();
-
-  if (loading) return <LinearProgress />;
-
   return (
     <Layout>
       <SelfClosingComponent
