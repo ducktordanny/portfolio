@@ -10,8 +10,8 @@ export const linkSwitcherClasses =
 
 const LinkSwitcher = ({ label, navigation, href }: LinkSwitcherProps) =>
   navigation ? (
-    <Link href={href}>
-      <a className={linkSwitcherClasses}>{label}</a>
+    <Link className={linkSwitcherClasses} href={href}>
+      {label}
     </Link>
   ) : (
     <a className={linkSwitcherClasses} href={href + ''}>
