@@ -15,7 +15,7 @@ export default function Logo({ className, width, height }: LogoProps) {
     <Link href="/home" className="logo">
       <Image
         priority={true}
-        src="/logo.svg"
+        src="/shared/logo.svg"
         alt="DucktorDanny logo"
         className={className || ''}
         width={width || 100}
