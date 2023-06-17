@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import { LinkComponent, ParentComponent } from '../../components/code';
+import { LinkComponent, ParentComponent } from 'jsx-styled/components/ui-code';
 
 // TODO: implement routes for each induvidual project? [name].tsx?
 
