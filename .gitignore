@@ -40,3 +40,5 @@ Thumbs.db
 
 # Next.js
 .next
+
+apps/jsx-styled/public/shared

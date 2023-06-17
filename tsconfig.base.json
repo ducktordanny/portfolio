@@ -18,9 +18,19 @@
       "jsx-styled/components/ui-code": [
         "libs/jsx-styled/components/ui-code/src/index.ts"
       ],
+      "jsx-styled/components/ui-layout": [
+        "libs/jsx-styled/components/ui-layout/src/index.ts"
+      ],
+      "jsx-styled/components/ui-navigation": [
+        "libs/jsx-styled/components/ui-navigation/src/index.ts"
+      ],
+      "jsx-styled/utils/util-animation-hooks": [
+        "libs/jsx-styled/utils/util-animation-hooks/src/index.ts"
+      ],
       "jsx-styled/utils/util-formatters": [
         "libs/jsx-styled/utils/util-formatters/src/index.ts"
-      ]
+      ],
+      "shared/assets": ["libs/shared/assets/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

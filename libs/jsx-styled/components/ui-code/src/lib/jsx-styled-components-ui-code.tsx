@@ -1,9 +1,11 @@
 import React from 'react';
 import { LinkProps } from 'next/link';
+
+import { startCase } from 'lodash';
+
 import { Component } from './colored';
 import { PropList, PropsObject } from './prop-list';
-import { capitalizeFirstLetter } from '../helpers/utils';
-import LinkSwitcher, { linkSwitcherClasses } from './linkSwitcher';
+import LinkSwitcher, { linkSwitcherClasses } from './link-switcher';
 
 export interface ComponentProps {
   name: string;
@@ -16,7 +18,7 @@ export const SelfClosingComponent: React.FC<ComponentProps> = ({
 }: ComponentProps) => {
   return (
     <section>
-      <Component>{`<${capitalizeFirstLetter(name)}`}</Component>
+      <Component>{`<${startCase(name)}`}</Component>
       <PropList array={props || []} />
       <Component>{'/>'}</Component>
     </section>
@@ -34,7 +36,7 @@ export const ParentComponent: React.FC<ParentComponentProps> = ({
 }: ParentComponentProps) => {
   return (
     <section className="parent-container">
-      <Component>{`<${capitalizeFirstLetter(name)}`}</Component>
+      <Component>{`<${startCase(name)}`}</Component>
       <PropList array={props || []} />
       <Component>{'>\n'}</Component>
       {children}
@@ -58,7 +60,7 @@ export const LinkComponent: React.FC<LinkComponentProps> = ({
       <Component>
         {`<`}
         <LinkSwitcher
-          label={capitalizeFirstLetter(name)}
+          label={startCase(name)}
           navigation={!!navigation}
           href={href}
         />

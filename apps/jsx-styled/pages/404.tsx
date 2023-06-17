@@ -1,17 +1,15 @@
 import React from 'react';
-import { SelfClosingComponent } from '../components/code';
-import Layout from '../components/layout';
+
+import { SelfClosingComponent } from 'jsx-styled/components/ui-code';
 
 const NotFound: React.FC = () => (
-  <Layout>
-    <SelfClosingComponent
-      name="Error"
-      props={[
-        { name: 'status', value: '404' },
-        { name: 'message', value: 'This page could not be found.' },
-      ]}
-    />
-  </Layout>
+  <SelfClosingComponent
+    name="Error"
+    props={[
+      { name: 'status', value: '404' },
+      { name: 'message', value: 'This page could not be found.' },
+    ]}
+  />
 );
 
 export default NotFound;

@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
-import { SelfClosingComponent } from '../components/code';
-import Layout from '../components/layout';
+
+import { SelfClosingComponent } from 'jsx-styled/components/ui-code';
 
 const Home: NextPage = () => {
   const getAge = (birthdayString: string): number => {
@@ -10,23 +10,21 @@ const Home: NextPage = () => {
   };
 
   return (
-    <Layout>
-      <SelfClosingComponent
-        name="PersonalInfo"
-        props={[
-          { name: 'fullName', value: 'Daniel Lazar' },
-          { name: 'age', value: getAge('2001-01-12') },
-          { name: 'country', value: 'Hungary' },
-          { name: 'school', value: 'University of Pannonia' },
-          {
-            name: 'majorIn',
-            value: 'Computer Science Engineering Bsc',
-          },
-          { name: 'status', value: 'Software Engineer at One Identity' },
-          { name: 'speaks', value: ['Hungarian', 'English'] },
-        ]}
-      />
-    </Layout>
+    <SelfClosingComponent
+      name="PersonalInfo"
+      props={[
+        { name: 'fullName', value: 'Daniel Lazar' },
+        { name: 'age', value: getAge('2001-01-12') },
+        { name: 'country', value: 'Hungary' },
+        { name: 'school', value: 'University of Pannonia' },
+        {
+          name: 'majorIn',
+          value: 'Computer Science Engineering Bsc',
+        },
+        { name: 'status', value: 'Software Engineer at One Identity' },
+        { name: 'speaks', value: ['Hungarian', 'English'] },
+      ]}
+    />
   );
 };
 

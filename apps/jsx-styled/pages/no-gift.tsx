@@ -1,15 +1,13 @@
 import { NextPage } from 'next';
-import { SelfClosingComponent } from '../components/code';
-import Layout from '../components/layout';
+
+import { SelfClosingComponent } from 'jsx-styled/components/ui-code';
 
 const NoGift: NextPage = () => {
   return (
-    <Layout>
-      <SelfClosingComponent
-        name="Info"
-        props={[{ name: 'message', value: 'Out of gifts, sorry! :(' }]}
-      />
-    </Layout>
+    <SelfClosingComponent
+      name="Info"
+      props={[{ name: 'message', value: 'Out of gifts, sorry! :(' }]}
+    />
   );
 };
 
