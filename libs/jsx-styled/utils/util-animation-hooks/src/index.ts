@@ -1,1 +1,1 @@
-export * from './lib/jsx-styled-utils-util-animation-hooks';
+export * from './lib/animation-hooks';

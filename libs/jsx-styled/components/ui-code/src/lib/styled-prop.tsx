@@ -20,7 +20,7 @@ export const StringProp = ({ value }: { value: string }) => (
 export const StringArrayProp = ({ values }: { values: string[] }) => (
   <>
     <Component>{'{['}</Component>
-    <Str>{`'${getFormatedComponentArrayProp(values, 4)}'`}</Str>
+    <Str>{getFormatedComponentArrayProp(values, 4)}</Str>
     <Component>{']}'}</Component>
   </>
 );

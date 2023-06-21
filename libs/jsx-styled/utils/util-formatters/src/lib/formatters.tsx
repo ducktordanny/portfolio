@@ -2,10 +2,10 @@
  * After that number of elements it inserts a new line.
  * */
 export function getFormatedComponentArrayProp(
-  array: any[],
+  array: string[],
   maxElementsInOneRow: number
 ) {
-  let result = '';
+  let result = "'";
 
   array.forEach((element, index) => {
     const shouldInsert = !((index + 1) % maxElementsInOneRow);
@@ -14,5 +14,5 @@ export function getFormatedComponentArrayProp(
     else result += element + "', '";
   });
 
-  return result;
+  return result + "'";
 }
