@@ -43,7 +43,7 @@ export const Navigation: React.FC<NavigationProps> = ({
         .map((path, index) => (
           <LinkComponent
             key={`${path}-${index}`}
-            name={path}
+            name={startCase(path)}
             navigation
             href={`/${path}`}
           />

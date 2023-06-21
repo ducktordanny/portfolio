@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import { Button, Tooltip } from '@mui/material';
-import { startCase } from 'lodash';
 
 import { ParentComponent } from 'jsx-styled/components/ui-code';
 import { Navigation } from 'jsx-styled/components/ui-navigation';
@@ -28,7 +27,7 @@ export function Layout({ children }: LayoutProps) {
   useScaleUp('main', 1);
 
   useEffect(() => {
-    setTitle(startCase(router.pathname.replace('/', '')));
+    setTitle(router.pathname.replace('/', ''));
   }, [router]);
 
   const redirectToCollectGift = async () => {

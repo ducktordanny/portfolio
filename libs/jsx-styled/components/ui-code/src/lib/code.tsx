@@ -1,8 +1,6 @@
 import React from 'react';
 import { LinkProps } from 'next/link';
 
-import { startCase } from 'lodash';
-
 import { Component } from './colored';
 import { PropList, PropsObject } from './prop-list';
 import LinkSwitcher, { linkSwitcherClasses } from './link-switcher';
@@ -18,7 +16,7 @@ export const SelfClosingComponent: React.FC<ComponentProps> = ({
 }: ComponentProps) => {
   return (
     <section>
-      <Component>{`<${startCase(name)}`}</Component>
+      <Component>{`<${name}`}</Component>
       <PropList array={props || []} />
       <Component>{'/>'}</Component>
     </section>
@@ -36,7 +34,7 @@ export const ParentComponent: React.FC<ParentComponentProps> = ({
 }: ParentComponentProps) => {
   return (
     <section className="parent-container">
-      <Component>{`<${startCase(name)}`}</Component>
+      <Component>{`<${name}`}</Component>
       <PropList array={props || []} />
       <Component>{'>\n'}</Component>
       {children}
@@ -59,11 +57,7 @@ export const LinkComponent: React.FC<LinkComponentProps> = ({
     <section>
       <Component>
         {`<`}
-        <LinkSwitcher
-          label={startCase(name)}
-          navigation={!!navigation}
-          href={href}
-        />
+        <LinkSwitcher label={name} navigation={!!navigation} href={href} />
         <PropList array={props || []} />
         {' />\n'}
       </Component>
