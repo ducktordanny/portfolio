@@ -1,5 +1,8 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+
+import { Layout } from 'jsx-styled/components/ui-layout';
+
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -9,7 +12,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>DucktorDanny</title>
         <meta name="theme-color" content="4b839e" />
       </Head>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }
