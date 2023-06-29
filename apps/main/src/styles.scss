@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$foreground: #eeeeee;
+$background: (
+  primary: #000000,
+  secondary: #383838,
+);
+
+$primary-palette: (
+  50: #e2f6fa,
+  100: #b7e7f3,
+  200: #8ad8ec,
+  300: #62c8e5,
+  400: #47bce2,
+  500: #33b1e0,
+  600: #2ba3d2,
+  700: #2190bf,
+  800: #1f7eac,
+  900: #145f8a,
+  contrast: map.get(mat.$blue-palette, 'contrast'),
+);
+$accent-palette: (
+  50: #faf3e2,
+  100: #f4e0b7,
+  200: #edcb89,
+  300: #e8b75c,
+  400: #e4a83e,
+  500: #e09b2c,
+  600: #dc9027,
+  700: #d68322,
+  800: #cf741e,
+  900: #c4601a,
+  contrast: map.get(mat.$orange-palette, 'contrast'),
+);
+
+$main-primary: mat.define-palette($primary-palette, 700);
+$main-accent: mat.define-palette($accent-palette, 700);
+
+$main-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $main-primary,
+      accent: $main-accent,
+    ),
+  )
+);
+
+@include mat.all-component-themes($main-theme);
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  color: $foreground;
+  background-color: map.get($background, 'primary');
+}
