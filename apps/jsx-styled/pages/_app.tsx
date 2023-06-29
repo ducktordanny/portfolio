@@ -10,6 +10,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>DucktorDanny</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="/public/shared/favicon.ico"
+        />
         <meta name="theme-color" content="4b839e" />
       </Head>
       <Layout>

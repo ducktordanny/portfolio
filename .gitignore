@@ -42,5 +42,6 @@ Thumbs.db
 .next
 
 apps/jsx-styled/public/shared
+apps/main/src/assets/shared
 
 .angular

@@ -15,7 +15,14 @@
         "main": "apps/main/src/main.ts",
         "polyfills": ["zone.js"],
         "tsConfig": "apps/main/tsconfig.app.json",
-        "assets": ["apps/main/src/favicon.ico", "apps/main/src/assets"],
+        "assets": [
+          "apps/main/src/assets",
+          {
+            "input": "libs/shared/assets/src/lib",
+            "glob": "**/*",
+            "output": "./assets/shared"
+          }
+        ],
         "styles": ["apps/main/src/styles.scss"],
         "scripts": []
       },
@@ -95,5 +102,6 @@
         "buildTarget": "main:build"
       }
     }
-  }
+  },
+  "implicitDependencies": ["shared-assets"]
 }

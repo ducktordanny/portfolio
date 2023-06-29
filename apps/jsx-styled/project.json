@@ -14,7 +14,7 @@
         "assets": [
           {
             "input": "libs/shared/assets/src/lib",
-            "glob": "**/*.svg",
+            "glob": "**/*",
             "output": "shared"
           }
         ]
@@ -73,5 +73,6 @@
       }
     }
   },
-  "tags": []
+  "tags": [],
+  "implicitDependencies": ["shared-assets"]
 }
