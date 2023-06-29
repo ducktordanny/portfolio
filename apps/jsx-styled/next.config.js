@@ -12,8 +12,15 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  basePath: '/jsx',
   async redirects() {
     return [
+      {
+        source: '/',
+        destination: '/jsx',
+        basePath: false,
+        permanent: false,
+      },
       {
         source: '/',
         destination: '/home',

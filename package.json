@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx run-many -t serve -p jsx-styled",
+    "start": "nx run-many -t serve -p main,jsx-styled",
     "build": "nx run-many -t build -p jsx-styled",
     "test": "nx run-many -t test"
   },
