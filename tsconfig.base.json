@@ -30,8 +30,8 @@
       "jsx-styled/utils/util-formatters": [
         "libs/jsx-styled/utils/util-formatters/src/index.ts"
       ],
-      "main/components/ui-layout": [
-        "libs/main/components/ui-layout/src/index.ts"
+      "main/common/ui-layout": [
+        "libs/main/common/ui-layout/src/index.ts"
       ],
       "shared/assets": ["libs/shared/assets/src/index.ts"]
     }
