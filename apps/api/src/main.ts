@@ -2,6 +2,7 @@ import express from 'express';
 import * as path from 'path';
 import cors from 'cors';
 import bodyParser from 'body-parser';
+import 'dotenv/config';
 
 import { DB } from 'api/util-db';
 import { meRouter } from 'api/me/feature-me';

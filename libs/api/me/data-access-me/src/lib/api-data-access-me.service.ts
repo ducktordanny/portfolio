@@ -17,7 +17,7 @@ const meSchema = new Schema<IMe>({
   },
 });
 
-const MeModel = model<IMe>('me', meSchema);
+export const MeModel = model<IMe>('me', meSchema);
 
 export class MeService {
   public static async get(): Promise<IMe> {

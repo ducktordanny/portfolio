@@ -15,7 +15,7 @@ describe('DB', () => {
         done();
       });
       expect(mongooseConnectSpy).toHaveBeenCalledWith(
-        'mongodb:localhost/portfolio'
+        'mongodb://localhost/portfolio'
       );
     });
 
