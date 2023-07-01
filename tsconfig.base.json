@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "api/util-db": ["libs/api/util-db/src/index.ts"],
       "jsx-styled/components/ui-code": [
         "libs/jsx-styled/components/ui-code/src/index.ts"
       ],
