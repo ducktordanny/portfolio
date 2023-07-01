@@ -4,6 +4,7 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import 'dotenv/config';
 
+import { version } from 'shared/constants';
 import { DB } from 'api/util-db';
 import { meRouter } from 'api/me/feature-me';
 
@@ -15,6 +16,9 @@ app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 const router = express.Router();
 
+router.get('/', (_, res) =>
+  res.send({ message: 'Welcome to the DucktorDanny API!', version })
+);
 router.use('/me', meRouter);
 
 app.use('/api', router);
