@@ -1,1 +1,1 @@
-export * from './lib/api-me-feature-me';
+export * from './lib/api-feature-me.controller';

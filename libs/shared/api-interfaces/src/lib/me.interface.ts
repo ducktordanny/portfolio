@@ -1,19 +1,19 @@
-export interface IName {
+export interface IMeName {
   first: string;
   last: string;
   also?: string;
 }
 
-export interface ILocation {
+export interface IMeLocation {
   country: string;
   city: string;
 }
 
 export interface IMe {
-  name: string;
+  name: IMeName;
   description: string;
   birthDate: Date;
   languages: Array<string>;
   from: string;
-  location: ILocation;
+  location: IMeLocation;
 }

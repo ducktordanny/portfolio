@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "api/me/data-access-me": ["libs/api/me/data-access-me/src/index.ts"],
       "api/me/feature-me": ["libs/api/me/feature-me/src/index.ts"],
       "api/util-db": ["libs/api/util-db/src/index.ts"],
       "jsx-styled/components/ui-code": [
