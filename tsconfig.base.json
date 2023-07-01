@@ -30,10 +30,10 @@
       "jsx-styled/utils/util-formatters": [
         "libs/jsx-styled/utils/util-formatters/src/index.ts"
       ],
-      "main/common/ui-layout": [
-        "libs/main/common/ui-layout/src/index.ts"
-      ],
-      "shared/assets": ["libs/shared/assets/src/index.ts"]
+      "main/common/ui-layout": ["libs/main/common/ui-layout/src/index.ts"],
+      "shared/api-interfaces": ["libs/shared/api-interfaces/src/index.ts"],
+      "shared/assets": ["libs/shared/assets/src/index.ts"],
+      "shared/constants": ["libs/shared/constants/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

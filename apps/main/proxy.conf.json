@@ -2,5 +2,9 @@
   "/jsx": {
     "target": "http://localhost:4000",
     "secure": false
+  },
+  "/api": {
+    "target": "http://localhost:3333",
+    "secure": false
   }
 }

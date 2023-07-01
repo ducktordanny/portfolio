@@ -3522,6 +3522,13 @@
   dependencies:
     "@nx/eslint-plugin" "16.3.2"
 
+"@nrwl/express@16.3.2":
+  version "16.3.2"
+  resolved "https://registry.yarnpkg.com/@nrwl/express/-/express-16.3.2.tgz#3abfb2382495e12a47ea3ca0d93373d7d04bc70c"
+  integrity sha512-clVJQ3GjRfJl+M4XlpGakcOf4wD/8Tw77a2czeq4YZ5CTy8kqD4l4mp6qnMIAHXzngCEfMdsczRp06Ea3CWCbw==
+  dependencies:
+    "@nx/express" "16.3.2"
+
 "@nrwl/jest@16.3.2":
   version "16.3.2"
   resolved "https://registry.yarnpkg.com/@nrwl/jest/-/jest-16.3.2.tgz#5e7a3cd23861d7aa31b52262e6dabc6ee2fa9206"
@@ -3549,6 +3556,13 @@
   integrity sha512-t624POqfAKyAZMX6JcM91YQowlFWLdV8ENhiI0Vt84gzwVTOGcwD9RzyEY90FwrovlJs2CLIMihKAhIvODdz1w==
   dependencies:
     "@nx/next" "16.3.2"
+
+"@nrwl/node@16.3.2":
+  version "16.3.2"
+  resolved "https://registry.yarnpkg.com/@nrwl/node/-/node-16.3.2.tgz#0a166101625018518f3f27d6b418d37e3b007f61"
+  integrity sha512-QRMN9K1LgfqeERdgynnLE7vruJshPVgAA1kp3AXcxZq6kmE+RxCZ/TxC6jzpCNEVg6tPYBzmBrJiqga+aDI8jQ==
+  dependencies:
+    "@nx/node" "16.3.2"
 
 "@nrwl/nx-cloud@16.0.5":
   version "16.0.5"
@@ -3661,6 +3675,15 @@
     confusing-browser-globals "^1.0.9"
     semver "7.3.4"
 
+"@nx/express@16.3.2":
+  version "16.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/express/-/express-16.3.2.tgz#37c8fc60f0171e1eab7e362bef721919c82d55d2"
+  integrity sha512-zNjPW7d5kKPFMbsgdHy4o0kaoa79a4wkIRjgs6jViCj5TgFVZQ33GrtfIH1l7RRzTr+Xs/O8Z2F7CUe5X8aDhw==
+  dependencies:
+    "@nrwl/express" "16.3.2"
+    "@nx/devkit" "16.3.2"
+    "@nx/node" "16.3.2"
+
 "@nx/jest@16.3.2":
   version "16.3.2"
   resolved "https://registry.yarnpkg.com/@nx/jest/-/jest-16.3.2.tgz#809297cb4aa45e277e8a57684e93f3953bb4bea5"
@@ -3749,6 +3772,19 @@
     tsconfig-paths-webpack-plugin "4.0.0"
     url-loader "^4.1.1"
     webpack-merge "^5.8.0"
+
+"@nx/node@16.3.2":
+  version "16.3.2"
+  resolved "https://registry.yarnpkg.com/@nx/node/-/node-16.3.2.tgz#912d5906bd8dc3b26e6d9f3b0101231e4ee04e15"
+  integrity sha512-UGRuawRYQczkus3Gne3JH2xIUeWPrw63j9UM+e0IynC7ocQFNGOZYvOhEMOyoq9fdb22vno17D5v84dRGuWlsA==
+  dependencies:
+    "@nrwl/node" "16.3.2"
+    "@nx/devkit" "16.3.2"
+    "@nx/jest" "16.3.2"
+    "@nx/js" "16.3.2"
+    "@nx/linter" "16.3.2"
+    "@nx/workspace" "16.3.2"
+    tslib "^2.3.0"
 
 "@nx/nx-darwin-arm64@16.3.2":
   version "16.3.2"
@@ -4368,7 +4404,7 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.1.tgz#aa22750962f3bf0e79d753d3cc067f010c95f194"
   integrity sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==
 
-"@types/express-serve-static-core@*", "@types/express-serve-static-core@^4.17.33":
+"@types/express-serve-static-core@*", "@types/express-serve-static-core@^4.17.18", "@types/express-serve-static-core@^4.17.33":
   version "4.17.35"
   resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.17.35.tgz#c95dd4424f0d32e525d23812aa8ab8e4d3906c4f"
   integrity sha512-wALWQwrgiB2AWTT91CB62b6Yt0sNHpznUXeZEcnPU3DRdlDIz74x8Qg1UUYKSVFi+va5vKOLYRBI1bRKiLLKIg==
@@ -4385,6 +4421,16 @@
   dependencies:
     "@types/body-parser" "*"
     "@types/express-serve-static-core" "^4.17.33"
+    "@types/qs" "*"
+    "@types/serve-static" "*"
+
+"@types/express@4.17.13":
+  version "4.17.13"
+  resolved "https://registry.yarnpkg.com/@types/express/-/express-4.17.13.tgz#a76e2995728999bab51a33fabce1d705a3709034"
+  integrity sha512-6bSZTPaTIACxn48l50SR+axgrqm6qXFIxrdAKaG6PaJk3+zuUr35hBlgT7vOmJcum+OEaIBLtHV/qloEAFITeA==
+  dependencies:
+    "@types/body-parser" "*"
+    "@types/express-serve-static-core" "^4.17.18"
     "@types/qs" "*"
     "@types/serve-static" "*"
 
@@ -9308,7 +9354,7 @@ jest-environment-jsdom@^29.0.0, jest-environment-jsdom@^29.4.1:
     jest-util "^29.5.0"
     jsdom "^20.0.0"
 
-jest-environment-node@^29.5.0:
+jest-environment-node@^29.4.1, jest-environment-node@^29.5.0:
   version "29.5.0"
   resolved "https://registry.yarnpkg.com/jest-environment-node/-/jest-environment-node-29.5.0.tgz#f17219d0f0cc0e68e0727c58b792c040e332c967"
   integrity sha512-ExxuIK/+yQ+6PRGaHkKewYtg6hto2uGCgvKdb2nfJfKXgZ17DfXjvbZ+jA1Qt9A8EQSfPnt5FKIfnOO3u1h9qw==
