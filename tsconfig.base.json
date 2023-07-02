@@ -15,8 +15,16 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "api/contacts/data-access": [
+        "libs/api/contacts/data-access/src/index.ts"
+      ],
+      "api/contacts/feature": ["libs/api/contacts/feature/src/index.ts"],
       "api/me/data-access": ["libs/api/me/data-access/src/index.ts"],
       "api/me/feature": ["libs/api/me/feature/src/index.ts"],
+      "api/projects/data-access": [
+        "libs/api/projects/data-access/src/index.ts"
+      ],
+      "api/projects/feature": ["libs/api/projects/feature/src/index.ts"],
       "api/skills/data-access": ["libs/api/skills/data-access/src/index.ts"],
       "api/skills/feature": ["libs/api/skills/feature/src/index.ts"],
       "api/util-db": ["libs/api/util-db/src/index.ts"],

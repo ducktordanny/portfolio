@@ -8,6 +8,8 @@ import { version } from 'shared/constants';
 import { DB } from 'api/util-db';
 import { meRouter } from 'api/me/feature';
 import { skillsRouter } from 'api/skills/feature';
+import { projectsRouter } from 'api/projects/feature';
+import { contactsRouter } from 'api/contacts/feature';
 
 const app = express();
 
@@ -20,8 +22,11 @@ const router = express.Router();
 router.get('/', (_, res) =>
   res.send({ message: 'Welcome to the DucktorDanny API!', version })
 );
+
 router.use('/me', meRouter);
 router.use('/skills', skillsRouter);
+router.use('/projects', projectsRouter);
+router.use('/contacts', contactsRouter);
 
 app.use('/api', router);
 
