@@ -7,6 +7,7 @@ import 'dotenv/config';
 import { version } from 'shared/constants';
 import { DB } from 'api/util-db';
 import { meRouter } from 'api/me/feature';
+import { skillsRouter } from 'api/skills/feature';
 
 const app = express();
 
@@ -20,6 +21,7 @@ router.get('/', (_, res) =>
   res.send({ message: 'Welcome to the DucktorDanny API!', version })
 );
 router.use('/me', meRouter);
+router.use('/skills', skillsRouter);
 
 app.use('/api', router);
 

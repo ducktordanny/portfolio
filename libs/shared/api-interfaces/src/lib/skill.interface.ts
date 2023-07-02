@@ -5,7 +5,7 @@ export interface IWorkPlace {
   description?: string;
 }
 
-export interface School {
+export interface ISchool {
   name: string;
   major: string;
 }
@@ -13,5 +13,5 @@ export interface School {
 export interface ISkill {
   stacks: Array<string>;
   workPlaces: Array<IWorkPlace>;
-  schools: Array<School>;
+  schools: Array<ISchool>;
 }

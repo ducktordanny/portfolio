@@ -17,6 +17,8 @@
     "paths": {
       "api/me/data-access": ["libs/api/me/data-access/src/index.ts"],
       "api/me/feature": ["libs/api/me/feature/src/index.ts"],
+      "api/skills/data-access": ["libs/api/skills/data-access/src/index.ts"],
+      "api/skills/feature": ["libs/api/skills/feature/src/index.ts"],
       "api/util-db": ["libs/api/util-db/src/index.ts"],
       "jsx-styled/components/ui-code": [
         "libs/jsx-styled/components/ui-code/src/index.ts"
