@@ -1,31 +1,31 @@
 {
-  "name": "api-me-feature-me",
+  "name": "api-me-feature",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/api/me/feature-me/src",
+  "sourceRoot": "libs/api/me/feature/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/api/me/feature-me",
-        "main": "libs/api/me/feature-me/src/index.ts",
-        "tsConfig": "libs/api/me/feature-me/tsconfig.lib.json",
-        "assets": ["libs/api/me/feature-me/*.md"]
+        "outputPath": "dist/libs/api/me/feature",
+        "main": "libs/api/me/feature/src/index.ts",
+        "tsConfig": "libs/api/me/feature/tsconfig.lib.json",
+        "assets": ["libs/api/me/feature/*.md"]
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/api/me/feature-me/**/*.ts"]
+        "lintFilePatterns": ["libs/api/me/feature/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/api/me/feature-me/jest.config.ts",
+        "jestConfig": "libs/api/me/feature/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {

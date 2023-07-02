@@ -6,7 +6,7 @@ import 'dotenv/config';
 
 import { version } from 'shared/constants';
 import { DB } from 'api/util-db';
-import { meRouter } from 'api/me/feature-me';
+import { meRouter } from 'api/me/feature';
 
 const app = express();
 

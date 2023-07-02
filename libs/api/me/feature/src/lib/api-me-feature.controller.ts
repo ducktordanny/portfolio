@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { MeService } from 'api/me/data-access-me';
+import { MeService } from 'api/me/data-access';
 
 const router = express.Router();
 
