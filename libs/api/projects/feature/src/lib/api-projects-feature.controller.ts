@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { ProjectsService } from 'api/projects/data-access';
+import {ProjectsService} from 'api/projects/data-access';
 
 const router = express.Router();
 
@@ -9,4 +9,4 @@ router.get('/', async (_, res) => {
   res.send(projects);
 });
 
-export { router as projectsRouter };
+export {router as projectsRouter};

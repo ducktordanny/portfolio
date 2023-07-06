@@ -1,5 +1,5 @@
-import { SkillModel, SkillService } from './api-skills-data-access.service';
-import { ISkill } from 'shared/api-interfaces';
+import {SkillModel, SkillService} from './api-skills-data-access.service';
+import {ISkill} from 'shared/api-interfaces';
 
 const skillsMock: ISkill = {
   stacks: ['mock', 'test', 'asd'],
@@ -22,9 +22,7 @@ describe('SkillService', () => {
   it('should get data', (done) => {
     jest
       .spyOn(SkillModel, 'find')
-      .mockResolvedValue([
-        { toObject: jest.fn(() => ({ _id: 'test', ...skillsMock })) },
-      ]);
+      .mockResolvedValue([{toObject: jest.fn(() => ({_id: 'test', ...skillsMock}))}]);
     SkillService.get().then((value) => {
       expect(value).toEqual(skillsMock);
       done();

@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { ContactsService } from 'api/contacts/data-access';
+import {ContactsService} from 'api/contacts/data-access';
 
 const router = express.Router();
 
@@ -9,4 +9,4 @@ router.get('/', async (_, res) => {
   res.send(contacts);
 });
 
-export { router as contactsRouter };
+export {router as contactsRouter};

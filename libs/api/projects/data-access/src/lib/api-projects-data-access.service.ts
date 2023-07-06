@@ -1,10 +1,10 @@
-import { Schema, model } from 'mongoose';
+import {Schema, model} from 'mongoose';
 
-import { IProject } from 'shared/api-interfaces';
+import {IProject} from 'shared/api-interfaces';
 
 const projectsSchema = new Schema<IProject>({
-  name: { type: String, required: true },
-  description: { type: String, required: true },
+  name: {type: String, required: true},
+  description: {type: String, required: true},
   demo: String,
   repo: String,
   stacks: [String],

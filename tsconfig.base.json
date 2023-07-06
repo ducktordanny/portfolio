@@ -15,34 +15,24 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "api/contacts/data-access": [
-        "libs/api/contacts/data-access/src/index.ts"
-      ],
+      "api/contacts/data-access": ["libs/api/contacts/data-access/src/index.ts"],
       "api/contacts/feature": ["libs/api/contacts/feature/src/index.ts"],
       "api/me/data-access": ["libs/api/me/data-access/src/index.ts"],
       "api/me/feature": ["libs/api/me/feature/src/index.ts"],
-      "api/projects/data-access": [
-        "libs/api/projects/data-access/src/index.ts"
-      ],
+      "api/projects/data-access": ["libs/api/projects/data-access/src/index.ts"],
       "api/projects/feature": ["libs/api/projects/feature/src/index.ts"],
       "api/skills/data-access": ["libs/api/skills/data-access/src/index.ts"],
       "api/skills/feature": ["libs/api/skills/feature/src/index.ts"],
       "api/util-db": ["libs/api/util-db/src/index.ts"],
-      "jsx-styled/components/ui-code": [
-        "libs/jsx-styled/components/ui-code/src/index.ts"
-      ],
-      "jsx-styled/components/ui-layout": [
-        "libs/jsx-styled/components/ui-layout/src/index.ts"
-      ],
+      "jsx-styled/components/ui-code": ["libs/jsx-styled/components/ui-code/src/index.ts"],
+      "jsx-styled/components/ui-layout": ["libs/jsx-styled/components/ui-layout/src/index.ts"],
       "jsx-styled/components/ui-navigation": [
         "libs/jsx-styled/components/ui-navigation/src/index.ts"
       ],
       "jsx-styled/utils/util-animation-hooks": [
         "libs/jsx-styled/utils/util-animation-hooks/src/index.ts"
       ],
-      "jsx-styled/utils/util-formatters": [
-        "libs/jsx-styled/utils/util-formatters/src/index.ts"
-      ],
+      "jsx-styled/utils/util-formatters": ["libs/jsx-styled/utils/util-formatters/src/index.ts"],
       "main/common/ui-layout": ["libs/main/common/ui-layout/src/index.ts"],
       "shared/api-interfaces": ["libs/shared/api-interfaces/src/index.ts"],
       "shared/assets": ["libs/shared/assets/src/index.ts"],

@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { MeService } from 'api/me/data-access';
+import {MeService} from 'api/me/data-access';
 
 const router = express.Router();
 
@@ -9,4 +9,4 @@ router.get('/', async (_, res) => {
   res.send(me);
 });
 
-export { router as meRouter };
+export {router as meRouter};

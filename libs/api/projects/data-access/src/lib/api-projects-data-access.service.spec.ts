@@ -1,9 +1,6 @@
-import { IProject } from 'shared/api-interfaces';
+import {IProject} from 'shared/api-interfaces';
 
-import {
-  ProjectsModel,
-  ProjectsService,
-} from './api-projects-data-access.service';
+import {ProjectsModel, ProjectsService} from './api-projects-data-access.service';
 
 const projectsMock: Array<IProject> = [
   {

@@ -1,5 +1,5 @@
-import { IMe } from 'shared/api-interfaces';
-import { MeModel, MeService } from './api-me-data-access.service';
+import {IMe} from 'shared/api-interfaces';
+import {MeModel, MeService} from './api-me-data-access.service';
 
 const meMock: IMe = {
   name: {
@@ -20,9 +20,7 @@ describe('MeService', () => {
   it('should get data', (done) => {
     jest
       .spyOn(MeModel, 'find')
-      .mockResolvedValue([
-        { toObject: jest.fn(() => ({ _id: 'test', ...meMock })) },
-      ]);
+      .mockResolvedValue([{toObject: jest.fn(() => ({_id: 'test', ...meMock}))}]);
     MeService.get().then((value) => {
       expect(value).toEqual(meMock);
       done();

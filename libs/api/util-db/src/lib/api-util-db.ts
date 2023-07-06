@@ -6,8 +6,6 @@ export class DB {
     return mongoose
       .connect(uri)
       .then(() => console.log('\nSuccessfully connected to MongoDB.\n'))
-      .catch((err) =>
-        console.log('\nCould not connect to MongoDB. Reason:\n', err.message)
-      );
+      .catch((err) => console.log('\nCould not connect to MongoDB. Reason:\n', err.message));
   }
 }
