@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "start": "nx run-many -t serve -p main,jsx-styled,api --parallel=3",
+    "start": "nx run-many -t serve -p main,admin,jsx-styled,api --parallel=4",
     "build": "nx run-many -t build -p jsx-styled",
     "test": "nx run-many -t test"
   },
