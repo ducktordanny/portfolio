@@ -43,5 +43,6 @@ Thumbs.db
 
 apps/jsx-styled/public/shared
 apps/main/src/assets/shared
+apps/api/.env
 
 .angular

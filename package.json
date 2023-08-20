@@ -82,7 +82,6 @@
     "@types/express-session": "^1.17.7",
     "@types/jest": "^29.4.0",
     "@types/lodash": "^4.14.195",
-    "@types/mongoose": "^5.11.97",
     "@types/node": "18.14.2",
     "@types/passport": "^1.0.12",
     "@types/passport-jwt": "^3.0.9",

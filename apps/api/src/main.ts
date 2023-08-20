@@ -22,7 +22,7 @@ app.use(cors());
 app.use(bodyParser.json({type: 'application/json'}));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
-app.use(session({secret: 'token', resave: true, saveUninitialized: true}));
+app.use(session({secret: process.env.SESSION_SECRET, resave: true, saveUninitialized: true}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
