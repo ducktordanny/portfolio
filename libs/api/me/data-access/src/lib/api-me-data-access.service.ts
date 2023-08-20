@@ -1,30 +1,21 @@
 import {Schema, model} from 'mongoose';
-import {IMe, IMeLocation, IMeName} from 'shared/api-interfaces';
+import {APIError, IMe} from 'shared/api-interfaces';
+import {CANNOT_FIND_IN_DB} from 'api/error-messages';
 
-const nameSchema = new Schema<IMeName>(
-  {
+const meSchema = new Schema<IMe>({
+  name: {
     first: {type: String, required: true},
     last: {type: String, required: true},
     also: String,
   },
-  {_id: false},
-);
-
-const locationSchema = new Schema<IMeLocation>(
-  {
-    country: {type: String, required: true},
-    city: {type: String, required: true},
-  },
-  {_id: false},
-);
-
-const meSchema = new Schema<IMe>({
-  name: {type: nameSchema, required: true},
-  description: {type: String, required: true},
+  description: {type: String, default: undefined, required: true},
   birthDate: {type: Date, required: true},
   languages: {type: [String], required: true},
   from: {type: String, required: true},
-  location: {type: locationSchema, required: true},
+  location: {
+    country: {type: String, required: true},
+    city: {type: String, required: true},
+  },
 });
 
 export const MeModel = model<IMe>('me', meSchema);
@@ -32,7 +23,17 @@ export const MeModel = model<IMe>('me', meSchema);
 export class MeService {
   public static async get(): Promise<IMe> {
     const result = await MeModel.find();
-    const {_id, ...me} = result[0].toObject();
+    const me = result?.[0]?.toObject();
+    if (!me) throw CANNOT_FIND_IN_DB;
     return me;
+  }
+
+  public static async change(body: IMe): Promise<void> {
+    const document = new MeModel(body);
+    const validation = document.validateSync();
+    if (validation) throw {message: validation.message, status: 400} as APIError;
+    await MeModel.updateOne({}, {$set: body}, {runValidators: true, upsert: true}).catch((err) => {
+      if (err) throw {message: err.message, status: 400};
+    });
   }
 }

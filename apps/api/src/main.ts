@@ -32,6 +32,7 @@ AuthService.init();
 
 router.get('/', (_, res) => res.send({message: 'Welcome to the DucktorDanny API!', version}));
 
+// TODO: Could improve further as now it has some repeating parts
 router.use('/me', meRouter);
 router.use('/skills', skillsRouter);
 router.use('/projects', projectsRouter);

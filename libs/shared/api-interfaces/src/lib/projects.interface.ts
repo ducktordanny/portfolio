@@ -1,7 +1,7 @@
 export interface IProject {
   name: string;
   description: string;
-  demo?: string;
-  repo?: string;
+  demoLink?: string;
+  repoLink?: string;
   stacks?: Array<string>;
 }
