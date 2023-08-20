@@ -2,12 +2,10 @@ import express from 'express';
 import passport from 'passport';
 
 import {AuthService} from 'api/auth/data-access';
-import {APIError} from 'shared/api-interfaces';
+import {INVALID_USER} from 'api/error-messages';
 
 const router = express.Router();
 const auth = AuthService.getInstance();
-
-const INVALID_USER: APIError = {message: 'Invalid username or password.', status: 400};
 
 router.post('/login', passport.authenticate('local'), (req, res, next) => {
   if (!req.user) return next('Invalid username or password');

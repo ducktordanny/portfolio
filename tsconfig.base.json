@@ -20,6 +20,7 @@
       "api/contacts/data-access": ["libs/api/contacts/data-access/src/index.ts"],
       "api/contacts/feature": ["libs/api/contacts/feature/src/index.ts"],
       "api/data-access-users": ["libs/api/data-access-users/src/index.ts"],
+      "api/error-messages": ["libs/api/error-messages/src/index.ts"],
       "api/me/data-access": ["libs/api/me/data-access/src/index.ts"],
       "api/me/feature": ["libs/api/me/feature/src/index.ts"],
       "api/projects/data-access": ["libs/api/projects/data-access/src/index.ts"],

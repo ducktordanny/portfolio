@@ -6,11 +6,7 @@ import {UserService} from 'api/data-access-users';
 import {APIError, IUser} from 'shared/api-interfaces';
 import {Types} from 'mongoose';
 import {NextFunction, Request, Response} from 'express';
-
-// TODO: should move these to a specific lib
-const INVALID_CREDS: APIError = {message: 'Incorrect username or password.', status: 401};
-const NOT_AUTHORIZED: APIError = {message: 'Not authorized to access the endpoint.', status: 403};
-const SOMETHING_WENT_WRONG: APIError = {message: 'Something went wrong.', status: 400};
+import {NOT_AUTHORIZED, INVALID_CREDS, SOMETHING_WENT_WRONG} from 'api/error-messages';
 
 export class AuthService {
   private static instance: AuthService;
