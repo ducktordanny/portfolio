@@ -1,6 +1,7 @@
 import {Schema, model} from 'mongoose';
 import {APIError, IMe} from 'shared/api-interfaces';
-import {CANNOT_FIND_IN_DB} from 'api/error-messages';
+import {CANNOT_FIND_IN_DB} from 'api/shared/error-messages';
+import {validateBody} from 'api/shared/util-endpoint-validator';
 
 const meSchema = new Schema<IMe>({
   name: {

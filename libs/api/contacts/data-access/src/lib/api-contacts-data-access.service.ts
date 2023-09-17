@@ -1,7 +1,7 @@
 import {Schema, model} from 'mongoose';
 
 import {APIError, IContacts} from 'shared/api-interfaces';
-import {CANNOT_FIND_IN_DB} from 'api/error-messages';
+import {CANNOT_FIND_IN_DB} from 'api/shared/error-messages';
 
 const contactsSchema = new Schema<IContacts>({
   email: {type: String, required: true},

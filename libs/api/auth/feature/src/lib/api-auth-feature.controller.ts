@@ -2,7 +2,7 @@ import express from 'express';
 import passport from 'passport';
 
 import {AuthService} from 'api/auth/data-access';
-import {INVALID_USER} from 'api/error-messages';
+import {INVALID_USER} from 'api/shared/error-messages';
 
 const router = express.Router();
 const auth = AuthService.getInstance();

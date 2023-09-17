@@ -1,4 +1,4 @@
 export interface APIError {
-  message: string;
+  message: Array<string> | string;
   status?: number;
 }

@@ -2,7 +2,7 @@ import express from 'express';
 
 import {ProjectsService} from 'api/projects/data-access';
 import {AuthService} from 'api/auth/data-access';
-import {INVALID_BODY, MISSING_ID} from 'api/error-messages';
+import {INVALID_BODY, MISSING_ID} from 'api/shared/error-messages';
 
 const router = express.Router();
 const auth = AuthService.getInstance();

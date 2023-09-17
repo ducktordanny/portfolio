@@ -1,0 +1,26 @@
+{
+  "name": "api-shared-error-messages",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/api/shared/error-messages/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/api/shared/error-messages",
+        "main": "libs/api/shared/error-messages/src/index.ts",
+        "tsConfig": "libs/api/shared/error-messages/tsconfig.lib.json",
+        "assets": ["libs/api/shared/error-messages/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/api/shared/error-messages/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

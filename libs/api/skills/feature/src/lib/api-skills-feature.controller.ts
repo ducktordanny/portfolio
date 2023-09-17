@@ -1,7 +1,7 @@
 import express from 'express';
 
 import {SkillService} from 'api/skills/data-access';
-import {INVALID_BODY} from 'api/error-messages';
+import {INVALID_BODY} from 'api/shared/error-messages';
 
 const router = express.Router();
 

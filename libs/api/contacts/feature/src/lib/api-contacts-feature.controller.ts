@@ -2,7 +2,7 @@ import express from 'express';
 
 import {ContactsService} from 'api/contacts/data-access';
 import {AuthService} from 'api/auth/data-access';
-import {INVALID_BODY} from 'api/error-messages';
+import {INVALID_BODY} from 'api/shared/error-messages';
 
 const router = express.Router();
 const auth = AuthService.getInstance();
