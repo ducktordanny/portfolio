@@ -1,4 +1,5 @@
 import {Schema, model} from 'mongoose';
+import {ArrayNotEmpty, IsArray, IsDefined, IsOptional, IsUrl} from 'class-validator';
 
 import {APIError, IProject} from 'shared/api-interfaces';
 import {CANNOT_FIND_IN_DB} from 'api/shared/error-messages';
@@ -12,6 +13,27 @@ const projectsSchema = new Schema<IProject>({
 });
 
 export const ProjectsModel = model('Project', projectsSchema);
+
+export class ProjectDto implements IProject {
+  @IsDefined()
+  name!: string;
+
+  @IsDefined()
+  description!: string;
+
+  @IsOptional()
+  @IsUrl()
+  demoLink?: string;
+
+  @IsOptional()
+  @IsUrl()
+  repoLink?: string;
+
+  @IsOptional()
+  @IsArray({each: true})
+  @ArrayNotEmpty()
+  stacks?: Array<string>;
+}
 
 export class ProjectsService {
   public static get(): Promise<Array<IProject>> {
@@ -38,7 +60,7 @@ export class ProjectsService {
   public static async create(body: IProject): Promise<void> {
     const project = new ProjectsModel(body);
     const validation = project.validateSync();
-    if (validation) throw {message: validation.message, status: 400};
+    if (validation) throw {message: validation.message, status: 400} as APIError;
     await project.save();
   }
 
