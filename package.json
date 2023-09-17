@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nx run-many -t serve -p main,admin,jsx-styled,api --parallel=4",
     "build": "nx run-many -t build -p jsx-styled",
-    "test": "nx run-many -t test --parallel=4"
+    "test": "nx run-many -t test"
   },
   "private": true,
   "dependencies": {
@@ -28,6 +28,8 @@
     "axios": "^1.0.0",
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.2",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
@@ -42,6 +44,7 @@
     "passport-local": "^1.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "reflect-metadata": "^0.1.13",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
@@ -81,7 +84,7 @@
     "@types/express": "4.17.13",
     "@types/express-session": "^1.17.7",
     "@types/jest": "^29.4.0",
-    "@types/lodash": "^4.14.195",
+    "@types/lodash": "^4.14.197",
     "@types/node": "18.14.2",
     "@types/passport": "^1.0.12",
     "@types/passport-jwt": "^3.0.9",

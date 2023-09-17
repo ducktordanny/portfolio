@@ -25,6 +25,9 @@
       "api/projects/data-access": ["libs/api/projects/data-access/src/index.ts"],
       "api/projects/feature": ["libs/api/projects/feature/src/index.ts"],
       "api/shared/error-messages": ["libs/api/shared/error-messages/src/index.ts"],
+      "api/shared/util-endpoint-validator": [
+        "libs/api/shared/util-endpoint-validator/src/index.ts"
+      ],
       "api/skills/data-access": ["libs/api/skills/data-access/src/index.ts"],
       "api/skills/feature": ["libs/api/skills/feature/src/index.ts"],
       "api/util-db": ["libs/api/util-db/src/index.ts"],

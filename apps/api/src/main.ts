@@ -6,6 +6,7 @@ import passport from 'passport';
 import cookieParser from 'cookie-parser';
 import session from 'express-session';
 import 'dotenv/config';
+import 'reflect-metadata';
 
 import {version} from 'shared/constants';
 import {DB} from 'api/util-db';
@@ -43,7 +44,7 @@ app.use('/api', router);
 
 app.use((err, req, res, next) => {
   console.error(err?.message || err);
-  res.status(err?.status || 500).json({error: err?.message || err});
+  res.status(err?.status || 500).json({errors: err?.message || err});
 });
 
 const port = process.env.PORT || 3333;
