@@ -25,14 +25,19 @@ export class ProjectsService {
     if (!isExisting) throw CANNOT_FIND_IN_DB;
     await ProjectsModel.findOneAndUpdate({_id: id}, body, {
       runValidators: true,
-    }).catch((err) => console.log(err));
+    }).catch((err) => {
+      throw {message: err, status: 400} as APIError;
+    });
   }
 
   public static async create(body: IProject): Promise<void> {
+    await validateBody(ProjectDto, body);
     const project = new ProjectsModel(body);
     const validation = project.validateSync();
     if (validation) throw {message: validation.message, status: 400} as APIError;
-    await project.save();
+    await project.save().catch((err) => {
+      throw {message: err, status: 400} as APIError;
+    });
   }
 
   public static async delete(id: string): Promise<void> {

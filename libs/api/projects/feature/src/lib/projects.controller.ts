@@ -27,7 +27,7 @@ router.post('/', auth.ensureAuth, async (req, res, next) => {
   const body = req?.body;
   if (!body) return next(INVALID_BODY);
   try {
-    ProjectsService.create(body);
+    await ProjectsService.create(body);
     res.status(200).send();
   } catch (err: unknown) {
     return next(err);
