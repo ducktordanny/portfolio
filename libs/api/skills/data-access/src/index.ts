@@ -1,1 +1,2 @@
-export * from './lib/api-skills-data-access.service';
+export * from './lib/skills.service';
+export * from './lib/skills.schema';

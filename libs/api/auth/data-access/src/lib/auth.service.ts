@@ -1,11 +1,11 @@
 import passport from 'passport';
 import * as passportLocal from 'passport-local';
 import {compare, hash} from 'bcrypt';
+import {Types} from 'mongoose';
+import {NextFunction, Request, Response} from 'express';
 
 import {UserService} from 'api/data-access-users';
 import {APIError, IUser} from 'shared/api-interfaces';
-import {Types} from 'mongoose';
-import {NextFunction, Request, Response} from 'express';
 import {NOT_AUTHORIZED, INVALID_CREDS, SOMETHING_WENT_WRONG} from 'api/shared/error-messages';
 
 export class AuthService {

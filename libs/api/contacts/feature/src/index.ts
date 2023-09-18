@@ -1,1 +1,1 @@
-export * from './lib/api-contacts-feature.controller';
+export * from './lib/contacts.controller';

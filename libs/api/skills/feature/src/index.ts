@@ -1,1 +1,1 @@
-export * from './lib/api-skills-feature.controller';
+export * from './lib/skills.controller';

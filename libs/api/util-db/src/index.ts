@@ -1,1 +1,1 @@
-export * from './lib/api-util-db';
+export * from './lib/db.util';

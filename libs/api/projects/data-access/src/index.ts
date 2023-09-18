@@ -1,1 +1,3 @@
-export * from './lib/api-projects-data-access.service';
+export * from './lib/projects.service';
+export * from './lib/projects.schema';
+export * from './lib/projects.dto';

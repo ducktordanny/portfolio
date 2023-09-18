@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
-import {DB} from './api-util-db';
+
+import {DB} from './db.util';
 
 describe('DB', () => {
   describe('init', () => {

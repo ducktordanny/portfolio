@@ -1,1 +1,1 @@
-export * from './lib/api-auth-feature.controller';
+export * from './lib/auth.controller';

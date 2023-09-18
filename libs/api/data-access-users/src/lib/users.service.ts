@@ -1,18 +1,10 @@
-import {Schema, Types, model} from 'mongoose';
+import {Types} from 'mongoose';
 
 import {APIError, IUser} from 'shared/api-interfaces';
 
-const usersSchema = new Schema<IUser>(
-  {
-    username: {type: String, required: true, unique: true},
-    password: {type: String, required: true},
-  },
-  {versionKey: false},
-);
+import {UsersModel} from './users.schema';
 
-export const UsersModel = model('user', usersSchema);
-
-export interface UserGetFilter {
+interface UserGetFilter {
   username?: string;
   _id?: Types.ObjectId;
 }

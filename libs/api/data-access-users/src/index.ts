@@ -1,1 +1,2 @@
-export * from './lib/api-users-data-access.service';
+export * from './lib/users.service';
+export * from './lib/users.schema';

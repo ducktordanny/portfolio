@@ -1,1 +1,1 @@
-export * from './lib/api-error-messages';
+export * from './lib/error-messages.const';

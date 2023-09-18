@@ -1,5 +1,7 @@
 import {IMe} from 'shared/api-interfaces';
-import {MeModel, MeService} from './api-me-data-access.service';
+
+import {MeService} from './me.service';
+import {MeModel} from './me.schema';
 
 const meMock: IMe = {
   name: {
