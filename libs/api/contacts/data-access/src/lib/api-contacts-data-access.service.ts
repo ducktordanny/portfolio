@@ -1,7 +1,10 @@
 import {Schema, model} from 'mongoose';
 
+import {validateBody} from 'api/shared/util-endpoint-validator';
 import {APIError, IContacts} from 'shared/api-interfaces';
 import {CANNOT_FIND_IN_DB} from 'api/shared/error-messages';
+
+import {ContactsDto} from './api-contacts-data-access.dto';
 
 const contactsSchema = new Schema<IContacts>({
   email: {type: String, required: true},
@@ -25,6 +28,7 @@ export class ContactsService {
   }
 
   public static async change(body: IContacts): Promise<void> {
+    await validateBody<ContactsDto, IContacts>(ContactsDto, body);
     const document = new ContactsModel(body);
     const validation = document.validateSync();
     if (validation) throw {message: validation.message, status: 400} as APIError;

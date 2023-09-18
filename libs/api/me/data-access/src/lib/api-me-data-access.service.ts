@@ -32,7 +32,7 @@ export class MeService {
   }
 
   public static async change(body: IMe): Promise<void> {
-    await validateBody(MeDto, body);
+    await validateBody<MeDto, IMe>(MeDto, body);
     const document = new MeModel(body);
     const validation = document.validateSync();
     if (validation) throw {message: validation.message, status: 400} as APIError;
