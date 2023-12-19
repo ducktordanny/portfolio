@@ -7,14 +7,15 @@ const projectsMock: Array<IProject> = [
   {
     name: 'Magic',
     description: "Nothing to see here it's just a mock...",
-    demo: 'magic-link-for-demo-mock',
-    repo: 'magic-link-for-repo-mock',
+    demoLink: 'magic-link-for-demo-mock',
+    repoLink: 'magic-link-for-repo-mock',
   },
   {
     name: 'Mock',
     description: 'Hello World',
-    demo: 'magic-link-for-demo-mock',
-    repo: 'magic-link-for-repo-mock',
+    demoLink: 'magic-link-for-demo-mock',
+    repoLink: 'magic-link-for-repo-mock',
+    stacks: ['ts', 'go', 'lua', 'idk'],
   },
 ];
 

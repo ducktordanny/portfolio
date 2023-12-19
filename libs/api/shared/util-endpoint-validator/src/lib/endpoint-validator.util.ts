@@ -5,6 +5,8 @@ import {last} from 'lodash';
 import {APIError} from 'shared/api-interfaces';
 import {INVALID_BODY} from 'api/shared/error-messages';
 
+import 'reflect-metadata';
+
 function validationErrorAdapter(validationMessage: ValidationError): string | undefined {
   const _ = undefined;
   const fullMessage = validationMessage.toString(_, _, _, true);

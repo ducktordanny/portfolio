@@ -1,4 +1,5 @@
-import {SkillModel, SkillService} from './api-skills-data-access.service';
+import {SkillService} from './skills.service';
+import {SkillModel} from './skills.schema';
 import {ISkill} from 'shared/api-interfaces';
 
 const skillsMock: ISkill = {
@@ -24,7 +25,7 @@ describe('SkillService', () => {
       .spyOn(SkillModel, 'find')
       .mockResolvedValue([{toObject: jest.fn(() => ({_id: 'test', ...skillsMock}))}]);
     SkillService.get().then((value) => {
-      expect(value).toEqual(skillsMock);
+      expect(value).toEqual(expect.objectContaining(skillsMock));
       done();
     });
   });

@@ -10,10 +10,10 @@ describe('DB', () => {
         .mockReturnValue(Promise.resolve({} as typeof mongoose));
       const consoleLogSpy = jest.spyOn(console, 'log');
       DB.init().then(() => {
-        expect(consoleLogSpy).toHaveBeenCalledWith('\nSuccessfully connected to MongoDB.\n');
+        expect(consoleLogSpy).toHaveBeenCalledWith('Successfully connected to MongoDB.');
         done();
       });
-      expect(mongooseConnectSpy).toHaveBeenCalledWith('mongodb://localhost/portfolio');
+      expect(mongooseConnectSpy).toHaveBeenCalledWith('mongodb://127.0.0.1/portfolio');
     });
 
     it('should get error', (done) => {

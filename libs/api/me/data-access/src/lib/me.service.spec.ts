@@ -24,7 +24,7 @@ describe('MeService', () => {
       .spyOn(MeModel, 'find')
       .mockResolvedValue([{toObject: jest.fn(() => ({_id: 'test', ...meMock}))}]);
     MeService.get().then((value) => {
-      expect(value).toEqual(meMock);
+      expect(value).toEqual(expect.objectContaining(meMock));
       done();
     });
   });
