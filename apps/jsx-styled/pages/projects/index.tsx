@@ -8,6 +8,30 @@ const Contacts: NextPage = () => (
     <ParentComponent
       name="Project"
       props={[
+        { name: 'name', value: 'eslint-plugin-ng-module-sort' },
+        {
+          name: 'description',
+          value:
+            'Sort Angular and NestJS module imports, declarations, exports, controls, etc.',
+        },
+        { name: 'type', value: 'ESLint plugin for Angular & NestJS' },
+      ]}
+    >
+      <LinkComponent
+        name="NPM"
+        href="https://www.npmjs.com/package/eslint-plugin-ng-module-sort"
+      />
+      <LinkComponent
+        name="Github"
+        href="https://github.com/ducktordanny/eslint-plugin-ng-module-sort"
+      />
+    </ParentComponent>
+
+    <label htmlFor="separating">{`  {/* -------------------- */}`}</label>
+
+    <ParentComponent
+      name="Project"
+      props={[
         { name: 'name', value: 'Opres' },
         {
           name: 'description',
@@ -16,13 +40,15 @@ const Contacts: NextPage = () => (
         { name: 'type', value: 'Nx: Angular + NestJs' },
       ]}
     >
-      <LinkComponent name="CheckOut" href="https://opres.help/" />
+      <LinkComponent name="CheckOut" href="https://opres.ducktordanny.com/" />
       <LinkComponent
         name="Github"
         href="https://github.com/ducktordanny/opres.help"
       />
     </ParentComponent>
+
     <label htmlFor="separating">{`  {/* -------------------- */}`}</label>
+
     <ParentComponent
       name="FeaturedProject"
       props={[
@@ -39,7 +65,9 @@ const Contacts: NextPage = () => (
         href="https://github.com/ducktordanny/family-shopping-list"
       />
     </ParentComponent>
+
     <label htmlFor="separating">{`  {/* -------------------- */}`}</label>
+
     <ParentComponent
       name="Project"
       props={[
@@ -56,7 +84,9 @@ const Contacts: NextPage = () => (
         href="https://github.com/ducktordanny/react-falling-emojis"
       />
     </ParentComponent>
+
     <label htmlFor="separating">{`  {/* -------------------- */}`}</label>
+
     <ParentComponent
       name="Project"
       props={[
