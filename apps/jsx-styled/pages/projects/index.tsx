@@ -16,13 +16,15 @@ const Contacts: NextPage = () => (
         { name: 'type', value: 'Nx: Angular + NestJs' },
       ]}
     >
-      <LinkComponent name="CheckOut" href="https://opres.help/" />
+      <LinkComponent name="CheckOut" href="https://opres.ducktordanny.com/" />
       <LinkComponent
         name="Github"
         href="https://github.com/ducktordanny/opres.help"
       />
     </ParentComponent>
+
     <label htmlFor="separating">{`  {/* -------------------- */}`}</label>
+
     <ParentComponent
       name="FeaturedProject"
       props={[
