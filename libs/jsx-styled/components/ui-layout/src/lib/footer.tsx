@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <footer className="mt-6 text-center text-white opacity-0 sm:pt-8">
-      Copyright © 2023 Daniel Lazar.
+      Copyright © 2025 Daniel Lazar.
     </footer>
   );
 };
