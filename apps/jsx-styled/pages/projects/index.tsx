@@ -40,48 +40,13 @@ const Contacts: NextPage = () => (
         { name: 'type', value: 'Nx: Angular + NestJs' },
       ]}
     >
-      <LinkComponent name="CheckOut" href="https://opres.ducktordanny.com/" />
+      <LinkComponent
+        name="CheckOutSite"
+        href="https://opres.ducktordanny.com/"
+      />
       <LinkComponent
         name="Github"
         href="https://github.com/ducktordanny/opres.help"
-      />
-    </ParentComponent>
-
-    <label htmlFor="separating">{`  {/* -------------------- */}`}</label>
-
-    <ParentComponent
-      name="FeaturedProject"
-      props={[
-        { name: 'name', value: 'FamsList' },
-        {
-          name: 'description',
-          value: 'Share a shopping list with your family or friends.',
-        },
-        { name: 'type', value: 'React Native + Express' },
-      ]}
-    >
-      <LinkComponent
-        name="Github"
-        href="https://github.com/ducktordanny/family-shopping-list"
-      />
-    </ParentComponent>
-
-    <label htmlFor="separating">{`  {/* -------------------- */}`}</label>
-
-    <ParentComponent
-      name="Project"
-      props={[
-        { name: 'name', value: 'React Falling Emojis' },
-        {
-          name: 'description',
-          value: 'Choose your emojis and make a rain with them. (not released)',
-        },
-        { name: 'type', value: 'React Library' },
-      ]}
-    >
-      <LinkComponent
-        name="Github"
-        href="https://github.com/ducktordanny/react-falling-emojis"
       />
     </ParentComponent>
 
@@ -101,6 +66,45 @@ const Contacts: NextPage = () => (
       <LinkComponent
         name="Github"
         href="https://github.com/ducktordanny/jsx-portfolio"
+      />
+    </ParentComponent>
+
+    <label htmlFor="separating">{`  {/* -------------------- */}`}</label>
+
+    <ParentComponent
+      name="Project"
+      props={[
+        { name: 'name', value: 'Reveal presentation template' },
+        {
+          name: 'description',
+          value: 'GitHub template repository for creating fancy presentations.',
+        },
+        { name: 'type', value: 'Reveal.js, Reveal-md' },
+      ]}
+    >
+      <LinkComponent
+        name="Github"
+        href="https://github.com/ducktordanny/presentation"
+      />
+    </ParentComponent>
+
+    <label htmlFor="separating">{`  {/* -------------------- */}`}</label>
+
+    <ParentComponent
+      name="Project"
+      props={[
+        { name: 'name', value: '.dotfiles' },
+        {
+          name: 'description',
+          value:
+            'Personal development-related configs: tmux, nvim, yabai, skhd, etc.',
+        },
+        { name: 'type', value: 'Configs' },
+      ]}
+    >
+      <LinkComponent
+        name="Github"
+        href="https://github.com/ducktordanny/.dotfiles"
       />
     </ParentComponent>
   </ParentComponent>
