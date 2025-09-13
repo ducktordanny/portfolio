@@ -3,6 +3,9 @@
   "affected": {
     "defaultBase": "master"
   },
+  "tui": {
+    "enabled": false
+  },
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nx/workspace/tasks-runners/default",
